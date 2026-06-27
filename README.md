@@ -2,7 +2,7 @@
 
 This repository tracks coursework for the **University of Colorado Boulder** course **EMEA 5023: Financial Forecasting and Reporting**.
 
-The current project is the **Module 2 Peer-graded Assignment: Understanding Financial Statements**. The analysis focuses on **Trane Technologies plc (NYSE: TT)** because Thermo King is part of Trane Technologies and is directly relevant to my work as a primary vendor.
+The current project is the **Module 2 Peer-graded Assignment: Understanding Financial Statements**. The analysis focuses on **Trane Technologies plc (NYSE: TT)** because Thermo King is part of Trane Technologies, and Thermo King is my primary vendor.
 
 ## Live Report
 
@@ -85,7 +85,7 @@ The live report is hosted with GitHub Pages from the root `index.html` file.
 
 **Company selected:** Trane Technologies plc (NYSE: TT)
 
-**Reason for selection:** Thermo King is part of Trane Technologies and is a primary vendor in my work. The financial health of Trane Technologies matters because it can affect vendor reliability, equipment availability, warranty support, parts supply, and long-term continuity.
+**Reason for selection:** Thermo King is part of Trane Technologies. Thermo King is my primary vendor, so we track Trane Technologies closely because the health of our primary vendor is important to my financial well being and employment.
 
 **Primary deliverables**
 - Jupyter Notebook report.
