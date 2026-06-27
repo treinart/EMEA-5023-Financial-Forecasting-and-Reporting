@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--XBRL Document Created with the Workiva Platform-->
+<!--Copyright 2026 Workiva-->
+<!--r:faa6ccd8-ea0d-4e42-916d-73b8cdd97209,g:da33e73c-3191-4844-9def-34dec873d84a-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:tt="http://www.tranetechnologies.com/20251231" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:dtr-types="http://www.xbrl.org/dtr/type/2024-01-31" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.tranetechnologies.com/20251231">
+  <xs:import namespace="http://fasb.org/srt/2025" schemaLocation="https://xbrl.fasb.org/srt/2025/elts/srt-2025.xsd"/>
+  <xs:import namespace="http://fasb.org/us-gaap/2025" schemaLocation="https://xbrl.fasb.org/us-gaap/2025/elts/us-gaap-2025.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd"/>
+  <xs:import namespace="http://www.xbrl.org/dtr/type/2024-01-31" schemaLocation="https://www.xbrl.org/dtr/type/2024-01-31/types.xsd"/>
+  <xs:import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd"/>
+  <xs:import namespace="http://xbrl.sec.gov/country/2025" schemaLocation="https://xbrl.sec.gov/country/2025/country-2025.xsd"/>
+  <xs:import namespace="http://xbrl.sec.gov/currency/2025" schemaLocation="https://xbrl.sec.gov/currency/2025/currency-2025.xsd"/>
+  <xs:import namespace="http://xbrl.sec.gov/cyd-af-sub/2025" schemaLocation="https://xbrl.sec.gov/cyd/2025/cyd-af-sub-2025.xsd"/>
+  <xs:import namespace="http://xbrl.sec.gov/dei/2025" schemaLocation="https://xbrl.sec.gov/dei/2025/dei-2025.xsd"/>
+  <xs:import namespace="http://xbrl.sec.gov/ecd/2025" schemaLocation="https://xbrl.sec.gov/ecd/2025/ecd-2025.xsd"/>
+  <xs:annotation>
+    <xs:appinfo>
+      <link:linkbaseRef xmlns:xlink="http://www.w3.org/1999/xlink" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="tt-20251231_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:type="simple"/>
+      <link:linkbaseRef xmlns:xlink="http://www.w3.org/1999/xlink" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="tt-20251231_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:type="simple"/>
+      <link:linkbaseRef xmlns:xlink="http://www.w3.org/1999/xlink" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="tt-20251231_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:type="simple"/>
+      <link:linkbaseRef xmlns:xlink="http://www.w3.org/1999/xlink" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="tt-20251231_cal.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:type="simple"/>
+      <link:roleType id="Cover" roleURI="http://www.tranetechnologies.com/role/Cover">
+        <link:definition>0000001 - Document - Cover</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="AuditInformation" roleURI="http://www.tranetechnologies.com/role/AuditInformation">
+        <link:definition>0000002 - Document - Audit Information</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsofEarnings" roleURI="http://www.tranetechnologies.com/role/ConsolidatedStatementsofEarnings">
+        <link:definition>9952151 - Statement - Consolidated Statements of Earnings</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsofEarningsAlternativeCalcDetails" roleURI="http://www.tranetechnologies.com/role/ConsolidatedStatementsofEarningsAlternativeCalcDetails">
+        <link:definition>9952152 - Statement - Consolidated Statements of Earnings - Alternative Calc (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementofComprehensiveIncome" roleURI="http://www.tranetechnologies.com/role/ConsolidatedStatementofComprehensiveIncome">
+        <link:definition>9952153 - Statement - Consolidated Statement of Comprehensive Income</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedBalanceSheets" roleURI="http://www.tranetechnologies.com/role/ConsolidatedBalanceSheets">
+        <link:definition>9952154 - Statement - Consolidated Balance Sheets</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedBalanceSheetsParenthetical" roleURI="http://www.tranetechnologies.com/role/ConsolidatedBalanceSheetsParenthetical">
+        <link:definition>9952155 - Statement - Consolidated Balance Sheets (Parenthetical)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsofEquity" roleURI="http://www.tranetechnologies.com/role/ConsolidatedStatementsofEquity">
+        <link:definition>9952156 - Statement - Consolidated Statements of Equity</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsofEquityParenthetical" roleURI="http://www.tranetechnologies.com/role/ConsolidatedStatementsofEquityParenthetical">
+        <link:definition>9952157 - Statement - Consolidated Statements of Equity (Parenthetical)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsofCashFlows" roleURI="http://www.tranetechnologies.com/role/ConsolidatedStatementsofCashFlows">
+        <link:definition>9952158 - Statement - Consolidated Statements of Cash Flows</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DescriptionofCompany" roleURI="http://www.tranetechnologies.com/role/DescriptionofCompany">
+        <link:definition>9952159 - Disclosure - Description of Company</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryofSignificantAccountingPolicies" roleURI="http://www.tranetechnologies.com/role/SummaryofSignificantAccountingPolicies">
+        <link:definition>9952160 - Disclosure - Summary of Significant Accounting Policies</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="Inventories" roleURI="http://www.tranetechnologies.com/role/Inventories">
+        <link:definition>9952161 - Disclosure - Inventories</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PropertyPlantandEquipment" roleURI="http://www.tranetechnologies.com/role/PropertyPlantandEquipment">
+        <link:definition>9952162 - Disclosure - Property, Plant and Equipment</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="Goodwill" roleURI="http://www.tranetechnologies.com/role/Goodwill">
+        <link:definition>9952163 - Disclosure - Goodwill</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IntangibleAssets" roleURI="http://www.tranetechnologies.com/role/IntangibleAssets">
+        <link:definition>9952164 - Disclosure - Intangible Assets</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DebtandCreditFacilities" roleURI="http://www.tranetechnologies.com/role/DebtandCreditFacilities">
+        <link:definition>9952165 - Disclosure - Debt and Credit Facilities</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FinancialInstruments" roleURI="http://www.tranetechnologies.com/role/FinancialInstruments">
+        <link:definition>9952166 - Disclosure - Financial Instruments</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurements" roleURI="http://www.tranetechnologies.com/role/FairValueMeasurements">
+        <link:definition>9952167 - Disclosure - Fair Value Measurements</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesNotes" roleURI="http://www.tranetechnologies.com/role/LeasesNotes">
+        <link:definition>9952168 - Disclosure - Leases (Notes)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PensionsandPostretirementBenefitsOtherthanPensions" roleURI="http://www.tranetechnologies.com/role/PensionsandPostretirementBenefitsOtherthanPensions">
+        <link:definition>9952169 - Disclosure - Pensions and Postretirement Benefits Other than Pensions</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RevenueNotes" roleURI="http://www.tranetechnologies.com/role/RevenueNotes">
+        <link:definition>9952170 - Disclosure - Revenue (Notes)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="Equity" roleURI="http://www.tranetechnologies.com/role/Equity">
+        <link:definition>9952171 - Disclosure - Equity</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensation" roleURI="http://www.tranetechnologies.com/role/ShareBasedCompensation">
+        <link:definition>9952172 - Disclosure - Share-Based Compensation</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RestructuringActivities" roleURI="http://www.tranetechnologies.com/role/RestructuringActivities">
+        <link:definition>9952173 - Disclosure - Restructuring Activities</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OtherNet" roleURI="http://www.tranetechnologies.com/role/OtherNet">
+        <link:definition>9952174 - Disclosure - Other, Net</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxes" roleURI="http://www.tranetechnologies.com/role/IncomeTaxes">
+        <link:definition>9952175 - Disclosure - Income Taxes</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="BusinessCombinations" roleURI="http://www.tranetechnologies.com/role/BusinessCombinations">
+        <link:definition>9952176 - Disclosure - Business Combinations</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EarningsPerShareEPS" roleURI="http://www.tranetechnologies.com/role/EarningsPerShareEPS">
+        <link:definition>9952177 - Disclosure - Earnings Per Share (EPS)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="BusinessSegmentInformation" roleURI="http://www.tranetechnologies.com/role/BusinessSegmentInformation">
+        <link:definition>9952178 - Disclosure - Business Segment Information</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsandContingencies" roleURI="http://www.tranetechnologies.com/role/CommitmentsandContingencies">
+        <link:definition>9952179 - Disclosure - Commitments and Contingencies</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PayablesandAccruals" roleURI="http://www.tranetechnologies.com/role/PayablesandAccruals">
+        <link:definition>9952180 - Disclosure - Payables and Accruals</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SubsequentEvents" roleURI="http://www.tranetechnologies.com/role/SubsequentEvents">
+        <link:definition>9952181 - Disclosure - Subsequent Events</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryofSignificantAccountingPoliciesPolicy" roleURI="http://www.tranetechnologies.com/role/SummaryofSignificantAccountingPoliciesPolicy">
+        <link:definition>9955511 - Disclosure - Summary of Significant Accounting Policies (Policy)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryofSignificantAccountingPoliciesTables" roleURI="http://www.tranetechnologies.com/role/SummaryofSignificantAccountingPoliciesTables">
+        <link:definition>9955512 - Disclosure - Summary of Significant Accounting Policies (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InventoriesTables" roleURI="http://www.tranetechnologies.com/role/InventoriesTables">
+        <link:definition>9955513 - Disclosure - Inventories (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PropertyPlantandEquipmentTables" roleURI="http://www.tranetechnologies.com/role/PropertyPlantandEquipmentTables">
+        <link:definition>9955514 - Disclosure - Property, Plant and Equipment (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="GoodwillTables" roleURI="http://www.tranetechnologies.com/role/GoodwillTables">
+        <link:definition>9955515 - Disclosure - Goodwill (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IntangibleAssetsTables" roleURI="http://www.tranetechnologies.com/role/IntangibleAssetsTables">
+        <link:definition>9955516 - Disclosure - Intangible Assets (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DebtandCreditFacilitiesTables" roleURI="http://www.tranetechnologies.com/role/DebtandCreditFacilitiesTables">
+        <link:definition>9955517 - Disclosure - Debt and Credit Facilities (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FinancialInstrumentsTables" roleURI="http://www.tranetechnologies.com/role/FinancialInstrumentsTables">
+        <link:definition>9955518 - Disclosure - Financial Instruments (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsTables" roleURI="http://www.tranetechnologies.com/role/FairValueMeasurementsTables">
+        <link:definition>9955519 - Disclosure - Fair Value Measurements (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesTables" roleURI="http://www.tranetechnologies.com/role/LeasesTables">
+        <link:definition>9955520 - Disclosure - Leases (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PensionsandPostretirementBenefitsOtherthanPensionsTables" roleURI="http://www.tranetechnologies.com/role/PensionsandPostretirementBenefitsOtherthanPensionsTables">
+        <link:definition>9955521 - Disclosure - Pensions and Postretirement Benefits Other than Pensions (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RevenueTables" roleURI="http://www.tranetechnologies.com/role/RevenueTables">
+        <link:definition>9955522 - Disclosure - Revenue (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EquityTables" roleURI="http://www.tranetechnologies.com/role/EquityTables">
+        <link:definition>9955523 - Disclosure - Equity (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationTables" roleURI="http://www.tranetechnologies.com/role/ShareBasedCompensationTables">
+        <link:definition>9955524 - Disclosure - Share-Based Compensation (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RestructuringActivitiesTables" roleURI="http://www.tranetechnologies.com/role/RestructuringActivitiesTables">
+        <link:definition>9955525 - Disclosure - Restructuring Activities (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OtherNetTables" roleURI="http://www.tranetechnologies.com/role/OtherNetTables">
+        <link:definition>9955526 - Disclosure - Other, Net (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesTables" roleURI="http://www.tranetechnologies.com/role/IncomeTaxesTables">
+        <link:definition>9955527 - Disclosure - Income Taxes (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="BusinessCombinationsTables" roleURI="http://www.tranetechnologies.com/role/BusinessCombinationsTables">
+        <link:definition>9955528 - Disclosure - Business Combinations (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EarningsPerShareEPSTables" roleURI="http://www.tranetechnologies.com/role/EarningsPerShareEPSTables">
+        <link:definition>9955529 - Disclosure - Earnings Per Share (EPS) (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="BusinessSegmentInformationTables" roleURI="http://www.tranetechnologies.com/role/BusinessSegmentInformationTables">
+        <link:definition>9955530 - Disclosure - Business Segment Information (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsandContingenciesTables" roleURI="http://www.tranetechnologies.com/role/CommitmentsandContingenciesTables">
+        <link:definition>9955531 - Disclosure - Commitments and Contingencies (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PayablesandAccrualsTables" roleURI="http://www.tranetechnologies.com/role/PayablesandAccrualsTables">
+        <link:definition>9955532 - Disclosure - Payables and Accruals (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SubsequentEventsTables" roleURI="http://www.tranetechnologies.com/role/SubsequentEventsTables">
+        <link:definition>9955533 - Disclosure - Subsequent Events (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CompletionofReverseMorrisTrustTransactionDetails" roleURI="http://www.tranetechnologies.com/role/CompletionofReverseMorrisTrustTransactionDetails">
+        <link:definition>9955534 - Disclosure - Completion of Reverse Morris Trust Transaction (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryofSignificantAccountingPoliciesNarrativeDetails" roleURI="http://www.tranetechnologies.com/role/SummaryofSignificantAccountingPoliciesNarrativeDetails">
+        <link:definition>9955535 - Disclosure - Summary of Significant Accounting Policies (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryofSignificantAccountingPoliciesDepreciationDetails" roleURI="http://www.tranetechnologies.com/role/SummaryofSignificantAccountingPoliciesDepreciationDetails">
+        <link:definition>9955536 - Disclosure - Summary of Significant Accounting Policies (Depreciation) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryofSignificantAccountingPoliciesWeightedAverageDetails" roleURI="http://www.tranetechnologies.com/role/SummaryofSignificantAccountingPoliciesWeightedAverageDetails">
+        <link:definition>9955537 - Disclosure - Summary of Significant Accounting Policies (Weighted-Average) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InventoriesScheduleofMajorClassesofInventoryDetails" roleURI="http://www.tranetechnologies.com/role/InventoriesScheduleofMajorClassesofInventoryDetails">
+        <link:definition>9955538 - Disclosure - Inventories (Schedule of Major Classes of Inventory) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InventoriesInventoriesNarrativeDetails" roleURI="http://www.tranetechnologies.com/role/InventoriesInventoriesNarrativeDetails">
+        <link:definition>9955539 - Disclosure - Inventories Inventories (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PropertyPlantandEquipmentNarrativeDetails" roleURI="http://www.tranetechnologies.com/role/PropertyPlantandEquipmentNarrativeDetails">
+        <link:definition>9955540 - Disclosure - Property, Plant and Equipment (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PropertyPlantandEquipmentScheduleofMajorClassesofPropertyPlantandEquipmentDetails" roleURI="http://www.tranetechnologies.com/role/PropertyPlantandEquipmentScheduleofMajorClassesofPropertyPlantandEquipmentDetails">
+        <link:definition>9955541 - Disclosure - Property, Plant and Equipment (Schedule of Major Classes of Property, Plant and Equipment) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="GoodwillDetails" roleURI="http://www.tranetechnologies.com/role/GoodwillDetails">
+        <link:definition>9955542 - Disclosure - Goodwill (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IntangibleAssetsIntangibleAssetsNarrativeDetails" roleURI="http://www.tranetechnologies.com/role/IntangibleAssetsIntangibleAssetsNarrativeDetails">
+        <link:definition>9955543 - Disclosure - Intangible Assets Intangible Assets Narrative (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IntangibleAssetsDetails" roleURI="http://www.tranetechnologies.com/role/IntangibleAssetsDetails">
+        <link:definition>9955544 - Disclosure - Intangible Assets (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DebtandCreditFacilitiesNarrativeDetails" roleURI="http://www.tranetechnologies.com/role/DebtandCreditFacilitiesNarrativeDetails">
+        <link:definition>9955545 - Disclosure - Debt and Credit Facilities (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DebtandCreditFacilitiesShortTermBorrowingsandCurrentMaturitiesofLongTermDebtDetails" roleURI="http://www.tranetechnologies.com/role/DebtandCreditFacilitiesShortTermBorrowingsandCurrentMaturitiesofLongTermDebtDetails">
+        <link:definition>9955546 - Disclosure - Debt and Credit Facilities (Short-Term Borrowings and Current Maturities of Long-Term Debt) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DebtandCreditFacilitiesLongTermDebtExcludingCurrentMaturitiesDetails" roleURI="http://www.tranetechnologies.com/role/DebtandCreditFacilitiesLongTermDebtExcludingCurrentMaturitiesDetails">
+        <link:definition>9955547 - Disclosure - Debt and Credit Facilities (Long-Term Debt Excluding Current Maturities) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FinancialInstrumentsNarrativeDetails" roleURI="http://www.tranetechnologies.com/role/FinancialInstrumentsNarrativeDetails">
+        <link:definition>9955548 - Disclosure - Financial Instruments (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FinancialInstrumentsScheduleofFairValuesofDerivativeInstrumentsDetails" roleURI="http://www.tranetechnologies.com/role/FinancialInstrumentsScheduleofFairValuesofDerivativeInstrumentsDetails">
+        <link:definition>9955549 - Disclosure - Financial Instruments Schedule of Fair Values of Derivative Instruments (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FinancialInstrumentsScheduleofDerivativesDesignatedasHedgesAffectingIncomeStatementandAccumulatedOtherComprehensiveIncomeDetails" roleURI="http://www.tranetechnologies.com/role/FinancialInstrumentsScheduleofDerivativesDesignatedasHedgesAffectingIncomeStatementandAccumulatedOtherComprehensiveIncomeDetails">
+        <link:definition>9955550 - Disclosure - Financial Instruments Schedule of Derivatives Designated as Hedges Affecting Income Statement and Accumulated Other Comprehensive Income (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FinancialInstrumentsScheduleofGainsandLossesofDerivativeFinancialInstrumentsNotDesignatedasHedgesDetails" roleURI="http://www.tranetechnologies.com/role/FinancialInstrumentsScheduleofGainsandLossesofDerivativeFinancialInstrumentsNotDesignatedasHedgesDetails">
+        <link:definition>9955551 - Disclosure - Financial Instruments Schedule of Gains and Losses of Derivative Financial Instruments Not Designated as Hedges (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsDetails" roleURI="http://www.tranetechnologies.com/role/FairValueMeasurementsDetails">
+        <link:definition>9955552 - Disclosure - Fair Value Measurements (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesDetails" roleURI="http://www.tranetechnologies.com/role/LeasesDetails">
+        <link:definition>9955553 - Disclosure - Leases (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PensionsandPostretirementBenefitsOtherthanPensionsNarrativeDetails" roleURI="http://www.tranetechnologies.com/role/PensionsandPostretirementBenefitsOtherthanPensionsNarrativeDetails">
+        <link:definition>9955554 - Disclosure - Pensions and Postretirement Benefits Other than Pensions (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PensionsandPostretirementBenefitsOtherthanPensionsComponentsoftheCompanysPensionRelatedCostsDetails" roleURI="http://www.tranetechnologies.com/role/PensionsandPostretirementBenefitsOtherthanPensionsComponentsoftheCompanysPensionRelatedCostsDetails">
+        <link:definition>9955555 - Disclosure - Pensions and Postretirement Benefits Other than Pensions (Components of the Company's Pension-Related Costs) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PensionsandPostretirementBenefitsOtherthanPensionsComponentsofNetPeriodicPostretirementBenefitCostDetails" roleURI="http://www.tranetechnologies.com/role/PensionsandPostretirementBenefitsOtherthanPensionsComponentsofNetPeriodicPostretirementBenefitCostDetails">
+        <link:definition>9955556 - Disclosure - Pensions and Postretirement Benefits Other than Pensions (Components of Net Periodic Postretirement Benefit Cost) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DefinedBenefitPlanOtherComprehensiveIncomeDetails" roleURI="http://www.tranetechnologies.com/role/DefinedBenefitPlanOtherComprehensiveIncomeDetails">
+        <link:definition>9955557 - Disclosure - Defined Benefit Plan, Other Comprehensive Income (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DefinedBenefitPlanWeightedAverageAssumptionsDetails" roleURI="http://www.tranetechnologies.com/role/DefinedBenefitPlanWeightedAverageAssumptionsDetails">
+        <link:definition>9955558 - Disclosure - Defined Benefit Plan, Weighted Average Assumptions (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DefinedBenefitPlanExpectedFuturePaymentsDetails" roleURI="http://www.tranetechnologies.com/role/DefinedBenefitPlanExpectedFuturePaymentsDetails">
+        <link:definition>9955559 - Disclosure - Defined Benefit Plan, Expected Future Payments (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DefinedBenefitPlanChangesDetails" roleURI="http://www.tranetechnologies.com/role/DefinedBenefitPlanChangesDetails">
+        <link:definition>9955560 - Disclosure - Defined Benefit Plan, Changes (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DefinedBenefitPlanLiabilitiesDetails" roleURI="http://www.tranetechnologies.com/role/DefinedBenefitPlanLiabilitiesDetails">
+        <link:definition>9955561 - Disclosure - Defined Benefit Plan, Liabilities (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DefinedBenefitPlanFairValueAssumptionsDetails" roleURI="http://www.tranetechnologies.com/role/DefinedBenefitPlanFairValueAssumptionsDetails">
+        <link:definition>9955562 - Disclosure - Defined Benefit Plan, Fair Value Assumptions (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RevenueDetails" roleURI="http://www.tranetechnologies.com/role/RevenueDetails">
+        <link:definition>9955563 - Disclosure - Revenue (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RevenueDisaggregationofRevenueDetails" roleURI="http://www.tranetechnologies.com/role/RevenueDisaggregationofRevenueDetails">
+        <link:definition>9955564 - Disclosure - Revenue Disaggregation of Revenue (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RevenueContractliabilitybalancestoberecognizedDetails" roleURI="http://www.tranetechnologies.com/role/RevenueContractliabilitybalancestoberecognizedDetails">
+        <link:definition>9955565 - Disclosure - Revenue Contract liability balances to be recognized (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EquityNarrativeDetails" roleURI="http://www.tranetechnologies.com/role/EquityNarrativeDetails">
+        <link:definition>9955566 - Disclosure - Equity (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EquityReconciliationofOrdinarySharesDetails" roleURI="http://www.tranetechnologies.com/role/EquityReconciliationofOrdinarySharesDetails">
+        <link:definition>9955567 - Disclosure - Equity (Reconciliation of Ordinary Shares) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EquityChangesInAccumulatedOtherComprehensiveIncomeLossDetails" roleURI="http://www.tranetechnologies.com/role/EquityChangesInAccumulatedOtherComprehensiveIncomeLossDetails">
+        <link:definition>9955568 - Disclosure - Equity (Changes In Accumulated Other Comprehensive Income (Loss) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EquityEquityOtherComprehensiveIncomeinNoncontrollingInterestDetails" roleURI="http://www.tranetechnologies.com/role/EquityEquityOtherComprehensiveIncomeinNoncontrollingInterestDetails">
+        <link:definition>9955569 - Disclosure - Equity Equity (Other Comprehensive Income in Noncontrolling Interest) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationNarrativeDetails" roleURI="http://www.tranetechnologies.com/role/ShareBasedCompensationNarrativeDetails">
+        <link:definition>9955570 - Disclosure - Share-Based Compensation (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationShareBasedCompensationExpenseDetails" roleURI="http://www.tranetechnologies.com/role/ShareBasedCompensationShareBasedCompensationExpenseDetails">
+        <link:definition>9955571 - Disclosure - Share-Based Compensation (Share-Based Compensation Expense) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationGrantsofStockOptionsandRSUsDetails" roleURI="http://www.tranetechnologies.com/role/ShareBasedCompensationGrantsofStockOptionsandRSUsDetails">
+        <link:definition>9955572 - Disclosure - Share-Based Compensation (Grants of Stock Options and RSUs) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationShareBasedCompensationAverageFairValueofStockOptionsGrantedAssumptionsDetails" roleURI="http://www.tranetechnologies.com/role/ShareBasedCompensationShareBasedCompensationAverageFairValueofStockOptionsGrantedAssumptionsDetails">
+        <link:definition>9955573 - Disclosure - Share-Based Compensation Share-Based Compensation (Average Fair Value of Stock Options Granted, Assumptions) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationGrantsofPSUsDetails" roleURI="http://www.tranetechnologies.com/role/ShareBasedCompensationGrantsofPSUsDetails">
+        <link:definition>9955574 - Disclosure - Share-Based Compensation (Grants of PSUs) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="GrantsIssuedStockOptionsTable" roleURI="http://www.tranetechnologies.com/role/GrantsIssuedStockOptionsTable">
+        <link:definition>9955575 - Disclosure - Grants Issued, Stock Options (Table)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RestructuringActivitiesNarrativeDetails" roleURI="http://www.tranetechnologies.com/role/RestructuringActivitiesNarrativeDetails">
+        <link:definition>9955576 - Disclosure - Restructuring Activities (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RestructuringActivitiesRestructuringChargesDetails" roleURI="http://www.tranetechnologies.com/role/RestructuringActivitiesRestructuringChargesDetails">
+        <link:definition>9955577 - Disclosure - Restructuring Activities (Restructuring Charges) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RestructuringActivitiesRestructuringReserveDetails" roleURI="http://www.tranetechnologies.com/role/RestructuringActivitiesRestructuringReserveDetails">
+        <link:definition>9955578 - Disclosure - Restructuring Activities (Restructuring Reserve) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OtherNetNarrativeDetails" roleURI="http://www.tranetechnologies.com/role/OtherNetNarrativeDetails">
+        <link:definition>9955579 - Disclosure - Other, Net (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OtherNetTableDetails" roleURI="http://www.tranetechnologies.com/role/OtherNetTableDetails">
+        <link:definition>9955580 - Disclosure - Other, Net Table (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesNarrativeDetails" roleURI="http://www.tranetechnologies.com/role/IncomeTaxesNarrativeDetails">
+        <link:definition>9955581 - Disclosure - Income Taxes (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesScheduleofEarningsLossBeforeIncomeTaxesDetails" roleURI="http://www.tranetechnologies.com/role/IncomeTaxesScheduleofEarningsLossBeforeIncomeTaxesDetails">
+        <link:definition>9955582 - Disclosure - Income Taxes Schedule of Earnings (Loss) Before Income Taxes (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesScheduleofComponentsofProvisionforIncomeTaxesDetails" roleURI="http://www.tranetechnologies.com/role/IncomeTaxesScheduleofComponentsofProvisionforIncomeTaxesDetails">
+        <link:definition>9955583 - Disclosure - Income Taxes (Schedule of Components of Provision for Income Taxes) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesScheduleofReconciliationBetweenStatutoryandEffectiveTaxRateDetails" roleURI="http://www.tranetechnologies.com/role/IncomeTaxesScheduleofReconciliationBetweenStatutoryandEffectiveTaxRateDetails">
+        <link:definition>9955584 - Disclosure - Income Taxes (Schedule of Reconciliation Between Statutory and Effective Tax Rate) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesScheduleofDeferredTaxAccountsDetails" roleURI="http://www.tranetechnologies.com/role/IncomeTaxesScheduleofDeferredTaxAccountsDetails">
+        <link:definition>9955585 - Disclosure - Income Taxes (Schedule of Deferred Tax Accounts) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesOperatingLossandTaxCreditCarryforwardsDetails" roleURI="http://www.tranetechnologies.com/role/IncomeTaxesOperatingLossandTaxCreditCarryforwardsDetails">
+        <link:definition>9955586 - Disclosure - Income Taxes (Operating Loss and Tax Credit Carryforwards) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesValuationAllowanceDetails" roleURI="http://www.tranetechnologies.com/role/IncomeTaxesValuationAllowanceDetails">
+        <link:definition>9955587 - Disclosure - Income Taxes (Valuation Allowance) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesUnrecognizedTaxBenefitDetails" roleURI="http://www.tranetechnologies.com/role/IncomeTaxesUnrecognizedTaxBenefitDetails">
+        <link:definition>9955588 - Disclosure - Income Taxes (Unrecognized Tax Benefit) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesDetails" roleURI="http://www.tranetechnologies.com/role/IncomeTaxesDetails">
+        <link:definition>9955589 - Disclosure - Income Taxes (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesPaid" roleURI="http://www.tranetechnologies.com/role/IncomeTaxesPaid">
+        <link:definition>9955590 - Disclosure - Income Taxes Paid</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="BusinessCombinationsDetails" roleURI="http://www.tranetechnologies.com/role/BusinessCombinationsDetails">
+        <link:definition>9955591 - Disclosure - Business Combinations (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EarningsPerShareEPSDetails" roleURI="http://www.tranetechnologies.com/role/EarningsPerShareEPSDetails">
+        <link:definition>9955592 - Disclosure - Earnings Per Share (EPS) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="BusinessSegmentInformationSummaryofOperationsbyReportableSegmentsDetails" roleURI="http://www.tranetechnologies.com/role/BusinessSegmentInformationSummaryofOperationsbyReportableSegmentsDetails">
+        <link:definition>9955593 - Disclosure - Business Segment Information (Summary of Operations by Reportable Segments) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="BusinessSegmentInformationScheduleofRevenuesbyDestinationDetails" roleURI="http://www.tranetechnologies.com/role/BusinessSegmentInformationScheduleofRevenuesbyDestinationDetails">
+        <link:definition>9955594 - Disclosure - Business Segment Information (Schedule of Revenues by Destination) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="BusinessSegmentInformationScheduleofLongLivedAssetbyGeographicAreaDetails" roleURI="http://www.tranetechnologies.com/role/BusinessSegmentInformationScheduleofLongLivedAssetbyGeographicAreaDetails">
+        <link:definition>9955595 - Disclosure - Business Segment Information (Schedule of Long-Lived Asset by Geographic Area) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="BusinessSegmentInformationRevenuebymajorproductsolutionDetails" roleURI="http://www.tranetechnologies.com/role/BusinessSegmentInformationRevenuebymajorproductsolutionDetails">
+        <link:definition>9955596 - Disclosure - Business Segment Information Revenue by major product/solution (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsandContingenciesNarrativeDetails" roleURI="http://www.tranetechnologies.com/role/CommitmentsandContingenciesNarrativeDetails">
+        <link:definition>9955597 - Disclosure - Commitments and Contingencies (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsandContingenciesScheduleofAsbestosRelatedBalancesDetails" roleURI="http://www.tranetechnologies.com/role/CommitmentsandContingenciesScheduleofAsbestosRelatedBalancesDetails">
+        <link:definition>9955598 - Disclosure - Commitments and Contingencies (Schedule of Asbestos-Related Balances) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsandContingenciesCostIncomeAsbestosRelatedClaimsafterRecoveriesDetails" roleURI="http://www.tranetechnologies.com/role/CommitmentsandContingenciesCostIncomeAsbestosRelatedClaimsafterRecoveriesDetails">
+        <link:definition>9955599 - Disclosure - Commitments and Contingencies (Cost/Income Asbestos Related Claims after Recoveries) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsandContingenciesProductWarrantyLiabilityDetails" roleURI="http://www.tranetechnologies.com/role/CommitmentsandContingenciesProductWarrantyLiabilityDetails">
+        <link:definition>9955600 - Disclosure - Commitments and Contingencies (Product Warranty Liability) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsandContingenciesCommitmentsandContingenciesExtendedWarrantyAccrualDetails" roleURI="http://www.tranetechnologies.com/role/CommitmentsandContingenciesCommitmentsandContingenciesExtendedWarrantyAccrualDetails">
+        <link:definition>9955601 - Disclosure - Commitments and Contingencies Commitments and Contingencies (Extended Warranty Accrual) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PayablesandAccrualsDetails" roleURI="http://www.tranetechnologies.com/role/PayablesandAccrualsDetails">
+        <link:definition>9955602 - Disclosure - Payables and Accruals (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SubsequentEventsDetails" roleURI="http://www.tranetechnologies.com/role/SubsequentEventsDetails">
+        <link:definition>9955603 - Disclosure - Subsequent Events (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element id="tt_FivePointTwentyFivePercentSeniorNotesDueTwoThousandThirtyThreeMember" abstract="true" name="FivePointTwentyFivePercentSeniorNotesDueTwoThousandThirtyThreeMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_FivePointOneZeroPercentSeniorNotesDueTwoThousandThirtyFourMember" abstract="true" name="FivePointOneZeroPercentSeniorNotesDueTwoThousandThirtyFourMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_AuditInformationAbstract" abstract="true" name="AuditInformationAbstract" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_Othercomprehensiveincomelosspensionandotherpostretirementbenefitplanscurrencytranslationbeforetax" abstract="false" name="Othercomprehensiveincomelosspensionandotherpostretirementbenefitplanscurrencytranslationbeforetax" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_OtherNetMember" abstract="true" name="OtherNetMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_CancellationOfTreasurySharesAmount" abstract="false" name="CancellationOfTreasurySharesAmount" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_CancellationOfTreasurySharesParValue" abstract="false" name="CancellationOfTreasurySharesParValue" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_ChangeInAccountingPrincipleOrStandardCumulativeEffectAdjustment" abstract="false" name="ChangeInAccountingPrincipleOrStandardCumulativeEffectAdjustment" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_NoncontrollingInterestIncreaseDecreaseFromAcquisitionsDivestituresAndOtherTransactions" abstract="false" name="NoncontrollingInterestIncreaseDecreaseFromAcquisitionsDivestituresAndOtherTransactions" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_InvestmentinJVPartner" abstract="false" name="InvestmentinJVPartner" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_StockIssuedDuringPeriodValueIncentiveStockPlansNetOfTaxRemittances" abstract="false" name="StockIssuedDuringPeriodValueIncentiveStockPlansNetOfTaxRemittances" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_CancellationOfTreasurySharesShares" abstract="false" name="CancellationOfTreasurySharesShares" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:sharesItemType"/>
+  <xs:element id="tt_SettlementRelatedToSpecialCashPayment" abstract="false" name="SettlementRelatedToSpecialCashPayment" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_GoodwillAbstract" abstract="true" name="GoodwillAbstract" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_IntangibleAssetsAbstract" abstract="true" name="IntangibleAssetsAbstract" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_DebtCreditFacilities" abstract="true" name="DebtCreditFacilities" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_ScheduleOfShortTermBorrowingsAndCurrentMaturitiesOfLongTermDebtTextBlock" abstract="false" name="ScheduleOfShortTermBorrowingsAndCurrentMaturitiesOfLongTermDebtTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_ScheduleOfLongTermDebtMaturitiesAndRepaymentsTextBlock" abstract="false" name="ScheduleOfLongTermDebtMaturitiesAndRepaymentsTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_FinancialInstrumentsAbstract" abstract="true" name="FinancialInstrumentsAbstract" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_FairValueMeasurementsAbstract" abstract="true" name="FairValueMeasurementsAbstract" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_ComponentsOfAccumulatedOtherComprehensiveIncomeLossTextBlock" abstract="false" name="ComponentsOfAccumulatedOtherComprehensiveIncomeLossTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_ShareBasedCompensationStockOptionAndRestrictedStockUnitsGrantedTextBlock" abstract="false" name="ShareBasedCompensationStockOptionAndRestrictedStockUnitsGrantedTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_OtherNetAbstract" abstract="true" name="OtherNetAbstract" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_CommitmentsAndContingenciesAbstract" abstract="true" name="CommitmentsAndContingenciesAbstract" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_ScheduleOfDepreciationRangeOfUsefulLivesTableTextBlock" abstract="false" name="ScheduleOfDepreciationRangeOfUsefulLivesTableTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_MajorclassesofinventoryTableTextBlock" abstract="false" name="MajorclassesofinventoryTableTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_ScheduleOfIntangibleAssetExcludingGoodwillTableTextBlock" abstract="false" name="ScheduleOfIntangibleAssetExcludingGoodwillTableTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_ScheduleofSupplementalBalanceSheetInformationRelatedtoLeasesTableTextBlock" abstract="false" name="ScheduleofSupplementalBalanceSheetInformationRelatedtoLeasesTableTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_RetirementBenefitsTable" abstract="true" name="RetirementBenefitsTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_ReconciliationOfOrdinarySharesTableTextBlock" abstract="false" name="ReconciliationOfOrdinarySharesTableTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_EffectofTaxCutsandJobActTableTextBlock" abstract="false" name="EffectofTaxCutsandJobActTableTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_ScheduleOfIncomeTaxesPaidNetOfRefundsTableTextBlock" abstract="false" name="ScheduleOfIncomeTaxesPaidNetOfRefundsTableTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_IncomeTaxesPaidTableTextBlockTableTextBlock" abstract="false" name="IncomeTaxesPaidTableTextBlockTableTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_SummarizedFinancialInformationForDiscontinuedOperationsTextBlockTableTextBlock" abstract="false" name="SummarizedFinancialInformationForDiscontinuedOperationsTextBlockTableTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_DisposalGroupsIngersollRandIndustrialTableTextBlock" abstract="false" name="DisposalGroupsIngersollRandIndustrialTableTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_DisposalGroupsAssetsAndLiabilitiesHeldForSaleTableTextBlock" abstract="false" name="DisposalGroupsAssetsAndLiabilitiesHeldForSaleTableTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_StandardProductWarrantyTable" abstract="true" name="StandardProductWarrantyTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_StandardProductWarrantyAxis" abstract="true" name="StandardProductWarrantyAxis" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_StandardProductWarrantyDomain" abstract="true" name="StandardProductWarrantyDomain" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_ExtendedWarrantyMember" abstract="true" name="ExtendedWarrantyMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_CostIncomeAsbestosRelatedClaimsAfterRecoveriesTextBlockTableTextBlock" abstract="false" name="CostIncomeAsbestosRelatedClaimsAfterRecoveriesTextBlockTableTextBlock" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_Receiptofaspecialcashpayment" abstract="false" name="Receiptofaspecialcashpayment" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_SettlementOfSpecialCashPayment" abstract="false" name="SettlementOfSpecialCashPayment" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_TrustTransactionTable" abstract="true" name="TrustTransactionTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_ReverseMorrisTrustTransactionMember" abstract="true" name="ReverseMorrisTrustTransactionMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_TrustTransactionLineItems" abstract="true" name="TrustTransactionLineItems" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_QualifiedSettlementFund" abstract="false" name="QualifiedSettlementFund" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_ChargeToIncreaseFundingLiability" abstract="false" name="ChargeToIncreaseFundingLiability" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_LiabilityfromDeconsolidation" abstract="false" name="LiabilityfromDeconsolidation" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_QSFFunding" abstract="false" name="QSFFunding" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_ScheduleOfDepreciationOfTangibleAssetsTable" abstract="true" name="ScheduleOfDepreciationOfTangibleAssetsTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_ScheduleOfDepreciationOfTangibleAssetsLineItems" abstract="true" name="ScheduleOfDepreciationOfTangibleAssetsLineItems" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_WeightedAverageUsefulLifeTable" abstract="true" name="WeightedAverageUsefulLifeTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_WeightedAverageUsefulLifeLineItems" abstract="true" name="WeightedAverageUsefulLifeLineItems" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_ScheduleOfIntangibleAssetsWeightedAverageUsefulLives" abstract="false" name="ScheduleOfIntangibleAssetsWeightedAverageUsefulLives" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:textBlockItemType"/>
+  <xs:element id="tt_InventoriesAbstract" abstract="true" name="InventoriesAbstract" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_A2026RevolvingCreditFacilityMember" abstract="true" name="A2026RevolvingCreditFacilityMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_A2023RevolvingCreditFacilityMember" abstract="true" name="A2023RevolvingCreditFacilityMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_A2027RevolvingCreditFacilityMember" abstract="true" name="A2027RevolvingCreditFacilityMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_ThreePointFivePercentSeniornotesDueTwoThousandTwentySixMember" abstract="true" name="ThreePointFivePercentSeniornotesDueTwoThousandTwentySixMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_ThreePointEightPercentSeniorNotesDueTwoThousandTwentyNineMember" abstract="true" name="ThreePointEightPercentSeniorNotesDueTwoThousandTwentyNineMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_FourPointFivePercentSeniorNotesDueTwoThousandFortyNineMember" abstract="true" name="FourPointFivePercentSeniorNotesDueTwoThousandFortyNineMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_FourPointTwoFivePercentSeniorNotesDueTwoThousandTwentyThreeMember" abstract="true" name="FourPointTwoFivePercentSeniorNotesDueTwoThousandTwentyThreeMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_FivePointSevenFivePercentSeniorNotesDueTwoThousandFortyThreeMember" abstract="true" name="FivePointSevenFivePercentSeniorNotesDueTwoThousandFortyThreeMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_ThreePointFiveFivePercentSeniorNotesdue2024Member" abstract="true" name="ThreePointFiveFivePercentSeniorNotesdue2024Member" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_FourPointSixFivePercentSeniorNotesDueTwentyFortyFour_DMember" abstract="true" name="FourPointSixFivePercentSeniorNotesDueTwentyFortyFour_DMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_DebenturesWithPutFeatureMember" abstract="true" name="DebenturesWithPutFeatureMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_DebenturesWithPutOptionAvailableToBeExcercised" abstract="false" name="DebenturesWithPutOptionAvailableToBeExcercised" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_SixPointFourEightPercentDebenturesDueTwoThousandTwentyFiveMember" abstract="true" name="SixPointFourEightPercentDebenturesDueTwoThousandTwentyFiveMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_SevenPointTwoZeroPercentDebenturesDomain" abstract="true" name="SevenPointTwoZeroPercentDebenturesDomain" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_SixPointFourEightPercentDebentureDueTwoThousandTwentyFiveMember" abstract="true" name="SixPointFourEightPercentDebentureDueTwoThousandTwentyFiveMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_SevenPointTwoPercentDebenturesDueTwoThousandTwentyFourAndTwoThousandTwentyFiveMember" abstract="true" name="SevenPointTwoPercentDebenturesDueTwoThousandTwentyFourAndTwoThousandTwentyFiveMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_ThreePointFiveFivePercentSeniorNotesDueTwoThousandTwentyFourMember" abstract="true" name="ThreePointFiveFivePercentSeniorNotesDueTwoThousandTwentyFourMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_TwoPointNinePercentSeniorNotesDueTwoThousandTwentyOneMemberMember" abstract="true" name="TwoPointNinePercentSeniorNotesDueTwoThousandTwentyOneMemberMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_ThreePointSevenFivePercentSeniorNotesDueTwoThousandTwentyEightMember" abstract="true" name="ThreePointSevenFivePercentSeniorNotesDueTwoThousandTwentyEightMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_SevenPointTwoZeroPercentDebenturesDueTwoThousandFourteenToTwoThousandTwentyFiveMemberMember" abstract="true" name="SevenPointTwoZeroPercentDebenturesDueTwoThousandFourteenToTwoThousandTwentyFiveMemberMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_FourPointThreePercentSeniorNotesDueTwoThousandFortyEightMember" abstract="true" name="FourPointThreePercentSeniorNotesDueTwoThousandFortyEightMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_FivePointTwoFivePercentSeniorNotesDueTwoThousandThirtyThreeMember" abstract="true" name="FivePointTwoFivePercentSeniorNotesDueTwoThousandThirtyThreeMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_FourPointThreePercentSeniorNotesDueTwentyFortyEightMember" abstract="true" name="FourPointThreePercentSeniorNotesDueTwentyFortyEightMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_FourPointSixFivePercentSeniorNotesdueTwentyFortyFourMember" abstract="true" name="FourPointSixFivePercentSeniorNotesdueTwentyFortyFourMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_FairValueMeasurementAbstract" abstract="true" name="FairValueMeasurementAbstract" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_PrepaidLeasePaymentandLeaseIncentive" abstract="false" name="PrepaidLeasePaymentandLeaseIncentive" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_DefinedBenefitPlanBenefitObligationAxisAxis" abstract="true" name="DefinedBenefitPlanBenefitObligationAxisAxis" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_DefinedBenefitPlanBenefitObligationAxisDomain" abstract="true" name="DefinedBenefitPlanBenefitObligationAxisDomain" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_AnnuityBuyOut2025COMember" abstract="true" name="AnnuityBuyOut2025COMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_AnnuityBuyOut2025DOMember" abstract="true" name="AnnuityBuyOut2025DOMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_SettlementChargeOnAnnuityBuyOut" abstract="false" name="SettlementChargeOnAnnuityBuyOut" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_SettlementTransferOnAnnuityBuyOut" abstract="false" name="SettlementTransferOnAnnuityBuyOut" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_PercentOfOurProjectedBenefitObligationRelatesToPlansThatCannotBeFunded" abstract="false" name="PercentOfOurProjectedBenefitObligationRelatesToPlansThatCannotBeFunded" nillable="true" xbrli:periodType="instant" substitutionGroup="xbrli:item" type="dtr-types:percentItemType"/>
+  <xs:element id="tt_ProjectedPensionExpense" abstract="false" name="ProjectedPensionExpense" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_PostretirementCostProjected" abstract="false" name="PostretirementCostProjected" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_Definedbenefitplannetperiodicbenefitcostbeforecurtailmentsettlementgainslosses" abstract="false" name="Definedbenefitplannetperiodicbenefitcostbeforecurtailmentsettlementgainslosses" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_DefinedBenefitPlanSettlementAndCurtailmentsPlanAssets" abstract="false" name="DefinedBenefitPlanSettlementAndCurtailmentsPlanAssets" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_OtherComprehensiveIncomeDefinedBenefitPlanTable" abstract="true" name="OtherComprehensiveIncomeDefinedBenefitPlanTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_PriorServiceCostMember" abstract="true" name="PriorServiceCostMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_NetActuarialLossesMember" abstract="true" name="NetActuarialLossesMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_OtherComprehensiveIncomeDefinedBenefitPlanLineItems" abstract="true" name="OtherComprehensiveIncomeDefinedBenefitPlanLineItems" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_DefinedBenefitPlanWeightedAverageAssumptionsTable" abstract="true" name="DefinedBenefitPlanWeightedAverageAssumptionsTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_DefinedBenefitPlanWeightedAverageAssumptionsLineItems" abstract="true" name="DefinedBenefitPlanWeightedAverageAssumptionsLineItems" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_DefinedBenefitPlanCurrentYearMedicalInflationRate" abstract="false" name="DefinedBenefitPlanCurrentYearMedicalInflationRate" nillable="true" xbrli:periodType="instant" substitutionGroup="xbrli:item" type="dtr-types:percentItemType"/>
+  <xs:element id="tt_DefinedBenefitPlanExpectedFuturePaymentsTable" abstract="true" name="DefinedBenefitPlanExpectedFuturePaymentsTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_DefinedBenefitPlanExpectedFuturePaymentsLineItems" abstract="true" name="DefinedBenefitPlanExpectedFuturePaymentsLineItems" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_DefinedBenefitPlanFairValueAssumptionsTable" abstract="true" name="DefinedBenefitPlanFairValueAssumptionsTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_RegisteredMutualFundsEquitySpecialtyMember" abstract="true" name="RegisteredMutualFundsEquitySpecialtyMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_CommingledFundsEquitySpecialtyMember" abstract="true" name="CommingledFundsEquitySpecialtyMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_USGovernmentAndAgencyObligationsMember" abstract="true" name="USGovernmentAndAgencyObligationsMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_CorporateAndNonUSBondsMember" abstract="true" name="CorporateAndNonUSBondsMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_AssetBackedAndMortgageBackedSecuritiesMember" abstract="true" name="AssetBackedAndMortgageBackedSecuritiesMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_RegisteredMutualFundsFixedIncomeSpecialtyMember" abstract="true" name="RegisteredMutualFundsFixedIncomeSpecialtyMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_CommingledFundsFixedIncomeSpecialtyMember" abstract="true" name="CommingledFundsFixedIncomeSpecialtyMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_OtherFixedIncomeMember" abstract="true" name="OtherFixedIncomeMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_OtherDefinedBenefitMember" abstract="true" name="OtherDefinedBenefitMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_ReceivablesAndPayablesMember" abstract="true" name="ReceivablesAndPayablesMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_DefinedBenefitPlanFairValueofPlanAssetsMeasuredUsingNetAssetValueMember" abstract="true" name="DefinedBenefitPlanFairValueofPlanAssetsMeasuredUsingNetAssetValueMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_DefinedBenefitPlanFairValueAssumptionsLineItems" abstract="true" name="DefinedBenefitPlanFairValueAssumptionsLineItems" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_CumulativeTransactionPriceAdjustment" abstract="false" name="CumulativeTransactionPriceAdjustment" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_CustomerContractAssetReclassToShortTerm" abstract="false" name="CustomerContractAssetReclassToShortTerm" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_CustomerContractLiabilityReclassificationToShortTerm" abstract="false" name="CustomerContractLiabilityReclassificationToShortTerm" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_EquipmentSalesMember" abstract="true" name="EquipmentSalesMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_ServicesAndPartsMember" abstract="true" name="ServicesAndPartsMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_NonUnitedStatesMember" abstract="true" name="NonUnitedStatesMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_A2024AuthorizationDomain" abstract="true" name="A2024AuthorizationDomain" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_A2022AuthorizationDomain" abstract="true" name="A2022AuthorizationDomain" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_ReconciliationOfOrdinarySharesTable" abstract="true" name="ReconciliationOfOrdinarySharesTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_ReconciliationOfOrdinarySharesLineItems" abstract="true" name="ReconciliationOfOrdinarySharesLineItems" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_FairValueOfOptionsAssumptionsTable" abstract="true" name="FairValueOfOptionsAssumptionsTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_StockOptionsAndRsusMember" abstract="true" name="StockOptionsAndRsusMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_PercentageOfAwardsAppliedToPerformanceCondition" abstract="false" name="PercentageOfAwardsAppliedToPerformanceCondition" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:percentItemType"/>
+  <xs:element id="tt_PercentageOfAwardsAppliedToMarketCondition" abstract="false" name="PercentageOfAwardsAppliedToMarketCondition" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:percentItemType"/>
+  <xs:element id="tt_DeferredCompensationMember" abstract="true" name="DeferredCompensationMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_OtherShareBasedCompensationMember" abstract="true" name="OtherShareBasedCompensationMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_GrantsIssuedOptionsTable" abstract="true" name="GrantsIssuedOptionsTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_GrantsIssuedOptionsLineItems" abstract="true" name="GrantsIssuedOptionsLineItems" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_OtherIncomeExpenseNetTableTable" abstract="true" name="OtherIncomeExpenseNetTableTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_OtherIncomeExpenseNetTableLineItems" abstract="true" name="OtherIncomeExpenseNetTableLineItems" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_ComponentsOfIncomeTaxTable" abstract="true" name="ComponentsOfIncomeTaxTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_ComponentsOfIncomeTaxLineItems" abstract="true" name="ComponentsOfIncomeTaxLineItems" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_EffectiveIncomeTaxRateReconciliationChangesInUnrecognizedTaxBenefitsAmount" abstract="false" name="EffectiveIncomeTaxRateReconciliationChangesInUnrecognizedTaxBenefitsAmount" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_EffectiveIncomeTaxRateReconciliationForeignTaxEffectsPerecentage" abstract="false" name="EffectiveIncomeTaxRateReconciliationForeignTaxEffectsPerecentage" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:percentItemType"/>
+  <xs:element id="tt_EffectiveIncomeTaxRateReconciliationAmount" abstract="false" name="EffectiveIncomeTaxRateReconciliationAmount" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_EffectiveIncomeTaxRateReconciliationChangesInUnrecognizedTaxBenefitsPercent" abstract="false" name="EffectiveIncomeTaxRateReconciliationChangesInUnrecognizedTaxBenefitsPercent" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:percentItemType"/>
+  <xs:element id="tt_EffectiveIncomeTaxRateReconciliationForeignTaxEffectsAmount" abstract="false" name="EffectiveIncomeTaxRateReconciliationForeignTaxEffectsAmount" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_Taxonussubsidiariesonnonusearnings" abstract="false" name="Taxonussubsidiariesonnonusearnings" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:percentItemType"/>
+  <xs:element id="tt_DeferredTaxAssetInventoryAndAccountReceivable" abstract="false" name="DeferredTaxAssetInventoryAndAccountReceivable" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_DeferredTaxAssetFixedAssetAndIntangibles" abstract="false" name="DeferredTaxAssetFixedAssetAndIntangibles" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_DeferredTaxLiabilityOperatingLeaseLiabilities" abstract="false" name="DeferredTaxLiabilityOperatingLeaseLiabilities" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_DeferredTaxAssetsFundingLiability" abstract="false" name="DeferredTaxAssetsFundingLiability" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_DeferredTaxLiabilityInventoryAndAccountReceivable" abstract="false" name="DeferredTaxLiabilityInventoryAndAccountReceivable" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_DeferredTaxLiabilityFixedAssetAndIntangibles" abstract="false" name="DeferredTaxLiabilityFixedAssetAndIntangibles" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_DeferredTaxAssetOperatingLeaserightofuseassets" abstract="false" name="DeferredTaxAssetOperatingLeaserightofuseassets" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_DeferredTaxLiabilityPostEmploymentAndOtherBenefitLiabilities" abstract="false" name="DeferredTaxLiabilityPostEmploymentAndOtherBenefitLiabilities" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_DeferredTaxLiabilityOtherReservesAndAccruals" abstract="false" name="DeferredTaxLiabilityOtherReservesAndAccruals" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_DeferredTaxLiabilityundistributedearningsofforeignsubsidiaries" abstract="false" name="DeferredTaxLiabilityundistributedearningsofforeignsubsidiaries" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_DeferredTaxAssetsProductLiability" abstract="false" name="DeferredTaxAssetsProductLiability" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_DeferredTaxLiabilityProductLiability" abstract="false" name="DeferredTaxLiabilityProductLiability" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_IncreaseToValuationAllowanceMember" abstract="true" name="IncreaseToValuationAllowanceMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_DecreaseToValuationAllowanceMember" abstract="true" name="DecreaseToValuationAllowanceMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_ForeignTaxCreditsDomain" abstract="true" name="ForeignTaxCreditsDomain" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_LegalEntityRestructuringMember" abstract="true" name="LegalEntityRestructuringMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_ValuationAllowanceDeferredTaxAssetsWrittenOff" abstract="false" name="ValuationAllowanceDeferredTaxAssetsWrittenOff" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_AcquisitionAndPurchaseAccountingForValuationAllowanceDeferredTaxAssets" abstract="false" name="AcquisitionAndPurchaseAccountingForValuationAllowanceDeferredTaxAssets" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_AccumulatedOtherComprehensiveIncomeOrLossonValuationAllowanceDeferredTaxAssets" abstract="false" name="AccumulatedOtherComprehensiveIncomeOrLossonValuationAllowanceDeferredTaxAssets" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_Separationcosts" abstract="false" name="Separationcosts" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_IndustrialSegmentBusinessesDomain" abstract="true" name="IndustrialSegmentBusinessesDomain" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_AsbestosRelatedActivitiesMember" abstract="true" name="AsbestosRelatedActivitiesMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_OtherDiscontinuedOperationsMember" abstract="true" name="OtherDiscontinuedOperationsMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_AldrichMember" abstract="true" name="AldrichMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_DeconsolidationGainLossAmountnetoftax" abstract="false" name="DeconsolidationGainLossAmountnetoftax" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_Separationcostsnetoftax" abstract="false" name="Separationcostsnetoftax" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_FundingExpenseUnderFundingAgreement" abstract="false" name="FundingExpenseUnderFundingAgreement" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_FarrarScientificMember" abstract="true" name="FarrarScientificMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_MeasurementPeriodAdjustments" abstract="false" name="MeasurementPeriodAdjustments" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_ChannelAcquisitionMember" abstract="true" name="ChannelAcquisitionMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_ALKOAcquisitionMember" abstract="true" name="ALKOAcquisitionMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_NuvoloMember" abstract="true" name="NuvoloMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_MTAMember" abstract="true" name="MTAMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_HelmerAcquisitionMember" abstract="true" name="HelmerAcquisitionMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_NuvoloEarnoutMember" abstract="true" name="NuvoloEarnoutMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_Q12026AcquisitionsMember" abstract="true" name="Q12026AcquisitionsMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_WeightedAverageEPSBasicAndDilutedSharesTable" abstract="true" name="WeightedAverageEPSBasicAndDilutedSharesTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_WeightedAverageEPSBasicAndDilutedSharesLineItems" abstract="true" name="WeightedAverageEPSBasicAndDilutedSharesLineItems" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="xbrli:stringItemType"/>
+  <xs:element id="tt_SegmentAdjustedEBITDA" abstract="false" name="SegmentAdjustedEBITDA" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_SegmentOperatingIncomeLoss" abstract="false" name="SegmentOperatingIncomeLoss" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_SegmentAdjustedDepreciationAndAmortization" abstract="false" name="SegmentAdjustedDepreciationAndAmortization" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_AdjustedOtherIncomeexpenseNet" abstract="false" name="AdjustedOtherIncomeexpenseNet" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_SegmentAdjustedOI" abstract="false" name="SegmentAdjustedOI" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_AcquisitionInventoryStepUp" abstract="false" name="AcquisitionInventoryStepUp" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_Unallocatedcorporateexpense" abstract="false" name="Unallocatedcorporateexpense" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_CommitmentsAndContingenciesTable" abstract="true" name="CommitmentsAndContingenciesTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_ContinuingandDiscontinuedOperationsMember" abstract="true" name="ContinuingandDiscontinuedOperationsMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_AldrichandMurrayMember" abstract="true" name="AldrichandMurrayMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+  <xs:element id="tt_ExpectedAnnualInflationRate" abstract="false" name="ExpectedAnnualInflationRate" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:percentItemType"/>
+  <xs:element id="tt_AdjustedExpectedAnnualInflationRate" abstract="false" name="AdjustedExpectedAnnualInflationRate" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:percentItemType"/>
+  <xs:element id="tt_ExtendedProductWarrantyAccrualTable" abstract="true" name="ExtendedProductWarrantyAccrualTable" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType"/>
+  <xs:element id="tt_SupplierFinancingInvoicesConfirmed" abstract="false" name="SupplierFinancingInvoicesConfirmed" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType"/>
+  <xs:element id="tt_ChristopherJ.KuehnMember" abstract="true" name="ChristopherJ.KuehnMember" nillable="true" xbrli:periodType="duration" substitutionGroup="xbrli:item" type="dtr-types:domainItemType"/>
+</xs:schema>
