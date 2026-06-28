@@ -1,9 +1,104 @@
+<!--
+Trane Technologies - Understanding Financial Statements
+EMEA 5023: Financial Forecasting and Reporting
+Module 2 Understanding Financial Statements
+University of Colorado Boulder
+Copyright © 2026 Travis Reinart
+
+Licensed under the MIT License.
+You may use and share this file with attribution under the terms of the MIT License.
+See: https://opensource.org/licenses/MIT
+
+Related Profiles:
+LinkedIn: https://www.linkedin.com/in/travis-reinart/
+GitHub: https://github.com/treinart
+-->
+
 <!DOCTYPE html>
 
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Trane Technologies - Understanding Financial Statements</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Trane Technologies - Understanding Financial Statements</title> <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<style>
+  /* --- Page chrome (dark) --- */
+  body {
+    background: #121212 !important;
+    color: #E0E0E0 !important;
+  }
+  a { color: #4DA3FF !important; }
+
+  /* --- Markdown content (stay dark) --- */
+  /* Classic notebook export */
+  .text_cell_render { color: #E0E0E0 !important; }
+  .text_cell_render pre,
+  .text_cell_render code {
+    background: #1E1E1E !important;
+    color: #CFCFCF !important;
+  }
+  /* JupyterLab export */
+  .jp-RenderedHTMLCommon,
+  .jp-RenderedMarkdown {
+    color: #E0E0E0 !important;
+  }
+  .jp-RenderedHTMLCommon pre,
+  .jp-RenderedHTMLCommon code {
+    background: #1E1E1E !important;
+    color: #CFCFCF !important;
+  }
+
+  /* --- Code inputs (optional dark) --- */
+  .input_area,
+  .jp-InputArea-editor {
+    background: #1A1A1A !important;
+    border: 1px solid #333 !important;
+  }
+  .input_area pre,
+  .CodeMirror pre,
+  .jp-Editor,
+  .jp-InputArea-editor .cm-editor {
+    color: #E6E6E6 !important;
+  }
+
+  /* --- OUTPUTS: keep light so they’re readable --- */
+  /* Classic */
+  .output,
+  .output_area {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    border: 1px solid #ddd !important;
+  }
+  .output_area pre {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  /* JupyterLab */
+  .jp-OutputArea-output,
+  .jp-RenderedText,
+  .jp-RenderedHTMLCommon table {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    border-color: #ddd !important;
+  }
+
+  /* DataFrames */
+  .dataframe,
+  .rendered_html table {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    border: 1px solid #ddd !important;
+  }
+  .dataframe th, .dataframe td,
+  .rendered_html table th, .rendered_html table td {
+    border-color: #ccc !important;
+  }
+
+  /* Images/SVG in outputs */
+  .output_png, .output_jpeg, .output_svg {
+    background: #FFFFFF !important;
+  }
+</style>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7517,14 +7612,133 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#F8F8F8;padding:25px;border-radius:15px;border-top:1px solid #CFB87C;border-bottom:1px solid #CFB87C;border-left:8px solid #CFB87C;border-right:8px solid #565A5C;font-family:Helvetica Neue,Arial,sans-serif;text-align:center;">
+<div style="background-color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:15px;border-top:1px solid #CFB87C;border-bottom:1px solid #CFB87C;border-left:8px solid #CFB87C;border-right:8px solid #565A5C;font-family:Helvetica Neue,Arial,sans-serif;text-align:center;box-sizing:border-box;overflow-wrap:anywhere;">
 <h1 style="color:#565A5C;font-size:42px;font-weight:bold;margin:0 0 8px 0;">Trane Technologies Financial Statement Analysis</h1>
 <h2 style="color:#CFB87C;font-size:31px;font-weight:bold;margin:0 0 10px 0;">Understanding Financial Statements</h2>
-<p style="color:#000000;font-size:17px;margin:0 0 14px 0;">Financial Forecasting and Reporting, Module 2</p>
-<span style="display:inline-block;background:#000000;color:#CFB87C;padding:8px 14px;border-radius:999px;margin:4px;font-weight:bold;">NYSE: TT</span>
-<span style="display:inline-block;background:#000000;color:#CFB87C;padding:8px 14px;border-radius:999px;margin:4px;font-weight:bold;">Thermo King vendor relevance</span>
-<span style="display:inline-block;background:#000000;color:#CFB87C;padding:8px 14px;border-radius:999px;margin:4px;font-weight:bold;">2025 Annual Report</span>
-<span style="display:inline-block;background:#000000;color:#CFB87C;padding:8px 14px;border-radius:999px;margin:4px;font-weight:bold;">Dollars in millions</span>
+<div style="text-align:center;margin:8px 0 12px 0;">
+    <span style="display:inline-block;background:#000000;color:#CFB87C;padding:8px 14px;border-radius:999px;margin:4px;font-weight:bold;">NYSE: TT</span>
+</div>
+
+<div style="text-align:center;margin-top:10px;">
+<a href="https://investors.tranetechnologies.com/financial-information/financial-summary/default.aspx" rel="noopener" style="color:#0046AE;text-decoration:underline;font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;font-weight:normal;overflow-wrap:anywhere;" target="_blank">
+       Trane Technologies Investor Financial Summary
+    </a>
+</div>
+<hr style="border:none;border-top:8px solid #565A5C;margin:6px 0;"/>
+<h2 style="color:#DA291C;text-align:center;font-family:'Helvetica Neue',Arial,sans-serif;font-size:40px;font-weight:bold;margin:16px 0 6px 0;">
+    By: Travis Reinart
+</h2>
+<h3 style="color:#000000;text-align:center;font-family:'Helvetica Neue',Arial,sans-serif;font-size:24px;font-weight:bold;margin:0 0 12px 0;">
+    June 27, 2026
+</h3>
+<h4 style="color:#565A5C;text-align:center;font-family:'Helvetica Neue',Arial,sans-serif;font-size:24px;font-weight:normal;border-top:1px solid #DCDCDC;padding-top:10px;margin-top:15px;">
+<strong>• EMEA 5023: <em>Financial Forecasting and Reporting •</em></strong><br/>
+<strong>• Module 2 <em>Understanding Financial Statements •</em></strong><br/>
+<strong>• University of Colorado Boulder •</strong>
+</h4>
+<div style="text-align:center;margin-top:10px;">
+<a href="https://github.com/treinart/EMEA-5023-Financial-Forecasting-and-Reporting/" rel="noopener" style="color:#0046AE;text-decoration:underline;font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;font-weight:bold;overflow-wrap:anywhere;" target="_blank">
+       GitHub - EMEA 5023 Financial Forecasting and Reporting
+    </a>
+</div>
+<div style="text-align:center;margin-top:10px;">
+<a href="https://github.com/treinart/EMEA-5023-Financial-Forecasting-and-Reporting/blob/main/Trane%20Technologies%20-%20Understanding%20Financial%20Statements.pdf" rel="noopener" style="color:#0046AE;text-decoration:underline;font-family:'Helvetica Neue',sans-serif;font-size:28px;font-weight:normal;" target="_blank">
+        Download PDF Report
+        </a>
+</div>
+<div style="text-align:center;margin-top:8px;">
+<a href="https://treinart.github.io/EMEA-5023-Financial-Forecasting-and-Reporting/" rel="noopener" style="color:#0046AE;text-decoration:underline;font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;font-weight:normal;overflow-wrap:anywhere;" target="_blank">
+       View Live HTML Analysis
+    </a>
+</div>
+<div style="text-align:center;margin-top:8px;">
+<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRf6DX0cslnk8t-FX-0LlwKsBicXI4l096DPmdkSBMFBJkIs2YUyIyTZd4eBtBRa8TV3ER4Pi769i9x/pubhtml" rel="noopener" style="color:#107C41 !important;text-decoration:underline;text-decoration-color:#107C41 !important;font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;font-weight:normal;overflow-wrap:anywhere;" target="_blank">
+       Financial XLSX Workbook
+    </a>
+</div>
+
+<hr style="border:none;border-top:3px solid #CFB87C;margin:10px 0;"/>
+<h6 style="color:#565A5C;text-align:center;font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;font-weight:normal;margin-bottom:2px;margin-top:40px;">
+    Copyright (c) 2026 Travis Reinart
+</h6>
+<h6 style="color:#565A5C;text-align:center;font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;font-weight:normal;margin-top:0;">
+    Licensed under the <a href="https://opensource.org/licenses/MIT" rel="noopener" style="color:#0046AE;text-decoration:underline;" target="_blank">MIT License</a>.
+</h6>
+<hr style="border:none;border-top:8px solid #565A5C;margin:10px 0;"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2ddbb134">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:32px;">Primary Source Documents</h2>
+<p style="font-size:17px;line-height:1.65;margin:0 0 16px 0;">
+The financial review uses Trane Technologies' annual filings and investor materials. The 2025 Form 10-K and 2025 Annual Report are the primary sources for the financial statement review. The 2024 and 2023 Annual Reports support the year-over-year comparison, especially where prior-year balance sheet values are needed. The Q4 and full-year 2025 presentation is used only as supplemental company-provided investor context.
+</p>
+<div style="background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:16px;margin:16px 0;width:100%;max-width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 12px 0;">Primary 2025 Filing Sources</h3>
+<p style="font-size:17px;line-height:1.8;margin:0;">
+<strong style="color:#CFB87C;">2025 Annual Report PDF:</strong>
+<a href="https://s2.q4cdn.com/950394465/files/doc_financials/2025/ar/Trane-technologies-annual-report-web-ready-final.pdf" rel="noopener" style="color:#0046AE;text-decoration:underline;overflow-wrap:anywhere;" target="_blank">
+        Trane Technologies 2025 Annual Report
+    </a>
+<br/>
+<p><strong style="color:#CFB87C;">2025 Form 10-K PDF Version:</strong>
+<a href="https://d18rn0p25nwr6d.cloudfront.net/CIK-0001466258/5ab69b9e-9219-4f06-967a-7665b882d492.pdf" rel="noopener" style="color:#0046AE;text-decoration:underline;overflow-wrap:anywhere;" target="_blank">
+Trane Technologies 2025 Form 10-K PDF
+</a>
+<br/></p>
+<p><strong style="color:#CFB87C;">2025 Form 10-K Direct SEC Filing:</strong>
+<a href="https://www.sec.gov/Archives/edgar/data/1466258/000162828026005731/tt-20251231.htm" rel="noopener" style="color:#0046AE;text-decoration:underline;overflow-wrap:anywhere;" target="_blank">
+Trane Technologies 2025 Form 10-K HTML Filing
+</a></p>
+</p>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-left:6px solid #A2A4A3;border-radius:8px;padding:16px;margin:16px 0;width:100%;max-width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 12px 0;">Year-over-Year Comparison Sources</h3>
+<p style="font-size:17px;line-height:1.8;margin:0;">
+<strong style="color:#CFB87C;">2024 Annual Report PDF:</strong>
+<a href="https://s2.q4cdn.com/950394465/files/doc_financials/2024/ar/Trane-technologies-annual-report-web-ready-final.pdf" rel="noopener" style="color:#0046AE;text-decoration:underline;overflow-wrap:anywhere;" target="_blank">
+        Trane Technologies 2024 Annual Report
+    </a>
+<br/>
+<p><strong style="color:#CFB87C;">2023 Annual Report PDF:</strong>
+<a href="https://s2.q4cdn.com/950394465/files/doc_financials/2023/ar/trane-technologies-annual-report-web-ready-final.pdf" rel="noopener" style="color:#0046AE;text-decoration:underline;overflow-wrap:anywhere;" target="_blank">
+Trane Technologies 2023 Annual Report
+</a></p>
+</p>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:16px;margin:16px 0;width:100%;max-width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 12px 0;">Supplemental Investor Presentation</h3>
+<p style="font-size:17px;line-height:1.8;margin:0;">
+<strong style="color:#CFB87C;">Q4 and Full-Year 2025 Earnings Presentation:</strong>
+<a href="https://s2.q4cdn.com/950394465/files/doc_financials/2025/q4/v2/Q4-2025-Earnings-Presentation-Final.pdf" rel="noopener" style="color:#0046AE;text-decoration:underline;overflow-wrap:anywhere;" target="_blank">
+        Trane Technologies Fourth-Quarter and Full-Year 2025 Results Presentation
+    </a>
+</p>
+<p style="font-size:15px;color:#A2A4A3;line-height:1.5;margin:12px 0 0 0;">
+Note: The Q4 and full-year 2025 presentation includes non-GAAP financial measures. It is used as supplemental investor context, not as the primary source for the audited financial statements.
+</p>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-left:6px solid #A2A4A3;border-radius:8px;padding:16px;margin:16px 0 0 0;width:100%;max-width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 12px 0;">SEC Filing Search</h3>
+<p style="font-size:17px;line-height:1.8;margin:0;">
+<strong style="color:#CFB87C;">SEC EDGAR Company Filings:</strong>
+<a href="https://www.sec.gov/edgar/browse/?CIK=1466258&amp;owner=exclude" rel="noopener" style="color:#0046AE;text-decoration:underline;overflow-wrap:anywhere;" target="_blank">
+        Trane Technologies SEC EDGAR Filing Page
+    </a>
+</p>
+<p style="font-size:15px;color:#A2A4A3;line-height:1.5;margin:12px 0 0 0;">
+This SEC page provides access to Trane Technologies' public filings, including annual Form 10-K filings.
+</p>
+</div>
+<hr style="border:none;border-top:8px solid #CFB87C;margin:20px 0 0 0;"/>
 </div>
 </div>
 </div>
@@ -7536,10 +7750,152 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Bottom Line</h2>
-<p style="font-size:16px;line-height:1.6;margin:0 0 12px 0;">Trane Technologies looks financially healthy based on the 2025 annual financial statements. The company grew revenue, expanded margins, generated strong earnings, and produced substantial operating cash flow.</p><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2025 Net Revenues</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$21,321.9M</div></div><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Operating Income</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$3,967.4M</div></div><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Net Earnings</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$2,918.6M</div></div><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Operating Cash Flow</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$3,194.5M</div></div><p style="font-size:16px;line-height:1.6;margin:0 0 12px 0;">I chose Trane because Thermo King is part of Trane Technologies, and Thermo King is my primary vendor.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:30px;">Executive Summary</h2>
+<p style="font-size:17px;line-height:1.65;margin:0 0 18px 0;">
+Trane Technologies shows a strong financial position based on its 2025 annual financial statements. Revenue, operating income, net earnings, diluted earnings per share, and operating cash flow all improved over the three-year review period. The company also converted a larger share of revenue into operating profit, which points to stronger operating performance rather than growth from sales volume alone.
+</p>
+<div style="background-color:#111111;border:1px solid #565A5C;border-left:7px solid #CFB87C;border-radius:10px;padding:16px;margin:14px 0;box-sizing:border-box;width:100%;">
+<h3 style="color:#CFB87C;font-size:26px;margin:0 0 12px 0;">2025</h3>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Net Revenues</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$21,321.9M</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Operating Income</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$3,967.4M</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Operating Margin</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">18.6%</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Net Earnings</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$2,918.6M</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Operating Cash Flow</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$3,194.5M</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Diluted EPS</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$12.98</div>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-left:7px solid #A2A4A3;border-radius:10px;padding:16px;margin:14px 0;box-sizing:border-box;width:100%;">
+<h3 style="color:#CFB87C;font-size:26px;margin:0 0 12px 0;">2024</h3>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Net Revenues</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$19,838.2M</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Operating Income</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$3,500.1M</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Operating Margin</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">17.6%</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Net Earnings</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$2,567.9M</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Operating Cash Flow</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$3,145.6M</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Diluted EPS</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$11.24</div>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-left:7px solid #A2A4A3;border-radius:10px;padding:16px;margin:14px 0;box-sizing:border-box;width:100%;">
+<h3 style="color:#CFB87C;font-size:26px;margin:0 0 12px 0;">2023</h3>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Net Revenues</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$17,677.6M</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Operating Income</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$2,894.0M</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Operating Margin</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">16.4%</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Net Earnings</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$2,023.9M</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Operating Cash Flow</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$2,389.6M</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:30%;min-width:230px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Diluted EPS</div>
+<div style="color:#F8F8F8;font-size:24px;font-weight:bold;margin-top:6px;">$8.77</div>
+</div>
+</div>
+</div>
+<hr style="border:none;border-top:8px solid #CFB87C;margin:20px 0 0 0;"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9ce37b4c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:32px;">Financial Analysis Overview</h2>
+<p style="font-size:17px;line-height:1.7;margin:0 0 20px 0;">
+The financial statements point to a company that is performing well and has room to keep funding its operations. The most important finding is not just that Trane Technologies grew revenue. The better finding is that profit margins improved while the company continued to produce cash. That combination makes the 2025 results more convincing than top-line growth by itself.
+</p>
+<div style="background-color:#111111;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:18px;margin:16px 0;width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 10px 0;">Profitability</h3>
+<p style="font-size:17px;line-height:1.65;margin:0;color:#F8F8F8;">
+Trane’s operating margin improved from 16.4% in 2023 to 18.6% in 2025. That matters because the company kept more profit from each dollar of revenue. Net margin was 13.7% in 2025, which shows that the improvement carried through beyond operating income and into earnings attributable to shareholders.
+</p>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:18px;margin:16px 0;width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 10px 0;">Cash Generation</h3>
+<p style="font-size:17px;line-height:1.65;margin:0;color:#F8F8F8;">
+The cash flow statement supports the earnings result. Operating cash flow was higher than net earnings attributable to Trane, and company-adjusted non-GAAP free cash flow was about $2.9B. That gives the company flexibility to reinvest, fund capital projects, support acquisitions, pay dividends, repurchase shares, and manage debt without relying only on new borrowing.
+</p>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:18px;margin:16px 0;width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 10px 0;">Liquidity and Working Capital</h3>
+<p style="font-size:17px;line-height:1.65;margin:0;color:#F8F8F8;">
+Short-term liquidity appears adequate. The current ratio was 1.25, so current assets were above current liabilities. The quick ratio was lower at 0.92, which means inventory is a meaningful part of the company’s short-term asset base. For a manufacturing and service business, this is expected, but it makes inventory turnover and receivables collection important to monitor.
+</p>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:18px;margin:16px 0;width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 10px 0;">Leverage</h3>
+<p style="font-size:17px;line-height:1.65;margin:0;color:#F8F8F8;">
+Leverage is the main item I would keep watching. The debt ratio was 59.8%, and the debt-to-equity ratio was 1.49. Those figures show that liabilities are an important part of the capital structure. The offset is coverage. Operating income covered interest expense 17.50 times, and the EBITDA-based interest coverage ratio was 19.16 times, so interest expense does not appear to be pressuring the business based on 2025 results.
+</p>
+</div>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:10px;padding:20px;margin:20px 0 0 0;width:100%;box-sizing:border-box;border-top:6px solid #CFB87C;">
+<h3 style="color:#565A5C;font-size:24px;margin:0 0 10px 0;">Conclusion</h3>
+<p style="font-size:17px;line-height:1.65;margin:0;color:#000000;">
+Overall, Trane Technologies appears financially healthy. The company has profitable growth, positive margin movement, reliable cash generation, and enough liquidity to meet short-term obligations. The main risk area is leverage, especially if demand weakens or working capital becomes less efficient. Based on the 2025 statements and ratio analysis, Trane appears capable of supporting operations, reinvestment, and capital returns.
+</p>
+</div>
+<h3 style="color:#CFB87C;font-size:24px;margin:30px 0 12px 0;">Company-Provided Performance Snapshot</h3>
+<div style="background-color:#F8F8F8;padding:16px;border-radius:8px;text-align:center;width:100%;max-width:100%;box-sizing:border-box;margin:0 0 0 0;">
+<img alt="Trane Technologies YoY Growth" src="images/q4_2025_slide_05.png" style="width:100%;max-width:1050px;height:auto;border-radius:4px;"/>
+</div>
+<p style="font-size:15px;color:#A2A4A3;line-height:1.5;margin:12px 0 0 0;">
+Source: Trane Technologies, Fourth-Quarter and Full-Year 2025 Results presentation, “Culture of Performance Excellence,” slide 5. This company-provided investor presentation includes non-GAAP financial measures; see Trane Technologies’ Q4 2025 earnings release for related reconciliations.
+</p>
 </div>
 </div>
 </div>
@@ -7551,9 +7907,22 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#A2A4A3;margin:0 0 12px 0;">Notebook Flow</h2>
-<p style="font-size:16px;line-height:1.6;margin:0;">Company overview, products and services, financial statement analysis, ratio math, required annual report screenshots, then a short annual trend review.</p>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;">Report Criteria</h2>
+<p style="font-size:17px;line-height:1.65;margin:0 0 14px 0;">
+This analysis reviews Trane Technologies' most recent annual filing, with a focus on the three core financial statements: the income statement, balance sheet, and statement of cash flows. The objective is to evaluate whether the company appears financially healthy based on profitability, liquidity, leverage, and cash generation.
+</p>
+<div style="background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:14px;margin:14px 0;width:100%;max-width:100%;box-sizing:border-box;overflow-wrap:break-word;">
+<p style="font-size:16px;line-height:1.6;margin:0;">
+<strong style="color:#CFB87C;">Primary source:</strong> Trane Technologies 2025 Annual Report / Form 10-K<br/>
+<strong style="color:#CFB87C;">Primary year reviewed:</strong> Fiscal year 2025<br/>
+<strong style="color:#CFB87C;">Comparison period:</strong> Fiscal years 2023 through 2025<br/>
+<strong style="color:#CFB87C;">Dollar amounts:</strong> In millions, unless otherwise noted
+    </p>
+</div>
+<p style="font-size:17px;line-height:1.65;margin:0;">
+The report starts with company context, then reviews the required financial statements, calculates selected financial ratios, includes the required statement screenshots, and ends with a short interpretation of the company’s financial condition.
+</p>
 <hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
 </div>
 </div>
@@ -7566,555 +7935,922 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#A2A4A3;margin:0 0 12px 0;">Part 1: Company Overview</h2>
-<p style="font-size:16px;line-height:1.6;margin:0;">Trane Technologies is a global climate company focused on HVAC, refrigeration, transport temperature control, controls, and related services.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:32px;">Company Overview</h2>
+<p style="font-size:17px;line-height:1.65;margin:0 0 16px 0;">
+Trane Technologies plc is a global climate company that provides heating, ventilation, air conditioning, transport refrigeration, custom refrigeration, controls, services, and related energy solutions. The company operates through two major strategic brands, Trane and Thermo King. Trane serves the commercial and residential HVAC markets, while Thermo King serves transport temperature control and cold-chain applications.
+</p>
+<p style="font-size:17px;line-height:1.65;margin:0 0 18px 0;">
+I selected Trane Technologies because it is the parent company of Thermo King, one of the most important manufacturers in transport refrigeration and my primary vendor. That connection makes the company more relevant to my professional work than an unrelated public company. Reviewing Trane’s financial statements also helps me understand the financial strength of a major vendor whose products, pricing, service network, and long-term strategy affect the transport refrigeration market.
+</p>
+<div style="background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:16px;margin:16px 0;width:100%;max-width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 12px 0;">Company Snapshot</h3>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:260px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Company</div>
+<div style="color:#F8F8F8;font-size:20px;font-weight:bold;margin-top:6px;">Trane Technologies plc</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:260px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Ticker Symbol</div>
+<div style="color:#F8F8F8;font-size:20px;font-weight:bold;margin-top:6px;">TT | New York Stock Exchange</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:260px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Industry</div>
+<div style="color:#F8F8F8;font-size:20px;font-weight:bold;margin-top:6px;">Climate, HVAC, and refrigeration</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:260px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Principal Office</div>
+<div style="color:#F8F8F8;font-size:20px;font-weight:bold;margin-top:6px;">Swords, County Dublin, Ireland</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:260px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2025 Net Revenues</div>
+<div style="color:#F8F8F8;font-size:20px;font-weight:bold;margin-top:6px;">$21.3 billion</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:260px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Employees</div>
+<div style="color:#F8F8F8;font-size:20px;font-weight:bold;margin-top:6px;">Approximately 44,000</div>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-left:6px solid #A2A4A3;border-radius:8px;padding:16px;margin:16px 0;width:100%;max-width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 12px 0;">Business Segments</h3>
+<p style="font-size:17px;line-height:1.65;margin:0 0 14px 0;">
+Trane Technologies reports results through three geographic operating segments. The Americas segment is the largest part of the company and includes commercial HVAC, residential HVAC, building controls, energy services, and transport refrigeration. EMEA and Asia Pacific also serve HVAC and transport refrigeration markets in their respective regions.
+</p>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:260px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Americas</div>
+<div style="color:#F8F8F8;font-size:22px;font-weight:bold;margin-top:6px;">$17.2B</div>
+<div style="color:#DCDCDC;font-size:14px;line-height:1.45;margin-top:6px;">Largest segment; includes North America and Latin America.</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:260px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">EMEA</div>
+<div style="color:#F8F8F8;font-size:22px;font-weight:bold;margin-top:6px;">$2.8B</div>
+<div style="color:#DCDCDC;font-size:14px;line-height:1.45;margin-top:6px;">Europe, Middle East, and Africa.</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:260px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:12px;margin:5px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Asia Pacific</div>
+<div style="color:#F8F8F8;font-size:22px;font-weight:bold;margin-top:6px;">$1.4B</div>
+<div style="color:#DCDCDC;font-size:14px;line-height:1.45;margin-top:6px;">Commercial HVAC and transport refrigeration across Asia Pacific.</div>
+</div>
+</div>
+</div>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:32px;">Products, Services, and Market Position</h2>
+<p style="font-size:17px;line-height:1.65;margin:0 0 12px 0;">
+Trane Technologies sells a broad range of products and services, including HVAC systems, chillers, building management systems, service agreements, energy management services, temporary heating and cooling, transport refrigeration systems, trailer refrigeration systems, truck refrigeration systems, container refrigeration systems, auxiliary power units, telematics, and related aftermarket parts and service.
+</p>
+<p style="font-size:17px;line-height:1.65;margin:0;">
+The company competes on price, quality, delivery, service and support, technology, and innovation. Based on the scope of its product portfolio, global presence, and major brands, Trane Technologies is positioned as one of the leading companies in HVAC systems, building climate solutions, and transport temperature control.
+</p>
+<div style="background-color:#F8F8F8;padding:12px;border-radius:8px;text-align:center;width:100%;max-width:100%;box-sizing:border-box;">
+<img alt="Trane Technologies Products and Services listing" src="images/products_and_services.png" style="width:100%;max-width:1050px;height:auto;border-radius:4px;"/>
+</div>
+<p style="font-size:15px;color:#A2A4A3;line-height:1.5;margin:12px 0 0 0;">
+Source: Trane Technologies 2025 Annual Report, Products and Services, page 100. This screenshot shows the company’s principal products and services, including HVAC, refrigeration, controls, energy services, transport refrigeration, aftermarket parts, and service agreements.
+</p>
+</div>
+<hr style="border:none;border-top:8px solid #CFB87C;margin:20px 0 0 0;"/>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3c196b04">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f82ffa0e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Why this company matters</h2>
-<p style="font-size:16px;line-height:1.6;margin:0 0 12px 0;">Trane Technologies plc is listed on the New York Stock Exchange under ticker TT. Its major brands include Trane and Thermo King. The company reports through Americas, EMEA, and Asia Pacific.</p><p style="font-size:16px;line-height:1.6;margin:0 0 12px 0;">I selected Trane Technologies because Thermo King is part of Trane Technologies. Thermo King is my primary vendor, so we track Trane Technologies closely because the health of our primary vendor is important to my financial well being and employment.</p>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:32px;">Annual Report Reviewed</h2>
+<p style="font-size:17px;line-height:1.65;margin:0 0 16px 0;">
+I reviewed Trane Technologies' 2025 Annual Report as one of the primary source documents for this analysis. The annual report provides a shareholder-facing summary of the company's 2025 performance, including revenue, bookings, backlog, free cash flow conversion, revenue mix, and shareholder return.
+</p>
+<div style="background-color:#F8F8F8;padding:12px;border-radius:8px;text-align:center;width:100%;max-width:100%;box-sizing:border-box;">
+<img alt="Trane Technologies 2025 Annual Report financial performance page" src="images/trane_2025_annual_report_financial_performance.png" style="width:100%;max-width:1050px;height:auto;border-radius:4px;"/>
+</div>
+<p style="font-size:15px;color:#A2A4A3;line-height:1.5;margin:12px 0 0 0;">
+Source: Trane Technologies 2025 Annual Report, 2025 Financial Performance page 4. This screenshot shows the company-published annual report summary used as a supporting source for the financial statement analysis.
+</p>
 <hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=634011ef">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=72fac042">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#A2A4A3;margin:0 0 12px 0;">Part 2: Products and Services</h2>
-<p style="font-size:16px;line-height:1.6;margin:0;">Trane is not just an equipment company. It sells equipment, service, controls, and recurring support that keep buildings and refrigerated transport systems running.</p>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:32px;">SEC Form 10-K Reviewed</h2>
+<p style="font-size:17px;line-height:1.65;margin:0 0 16px 0;">
+I also reviewed Trane Technologies' 2025 Form 10-K filed with the U.S. Securities and Exchange Commission. This is the official filing source for the audited financial statements, including the income statement, balance sheet, statement of cash flows, notes to the financial statements, and management's discussion and analysis.
+</p>
+<div style="background-color:#F8F8F8;padding:12px;border-radius:8px;text-align:center;width:100%;max-width:100%;box-sizing:border-box;">
+<img alt="Trane Technologies 2025 Form 10-K cover page" src="images/trane_2025_form_10k_cover.png" style="width:100%;max-width:950px;height:auto;border-radius:4px;"/>
+</div>
+<p style="font-size:15px;color:#A2A4A3;line-height:1.5;margin:12px 0 0 0;">
+Source: Trane Technologies 2025 Annual Report, 2025 Financial Performance page 95. 2025 Form 10-K, fiscal year ended December 31, 2025. This screenshot confirms the SEC filing used as the primary source for the financial statement review.
+</p>
 <hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3a42fd1f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ab96d14f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Business lines in plain English</h2>
-<ul style="font-size:16px;line-height:1.55;margin:0 0 8px 22px;padding:0;"><li style="margin:5px 0;"><strong>Trane:</strong> commercial and residential HVAC equipment, building systems, controls, and services.</li><li style="margin:5px 0;"><strong>Thermo King:</strong> transport refrigeration and temperature-control systems for trailers, trucks, rail, marine, and cold chain applications.</li><li style="margin:5px 0;"><strong>Services:</strong> maintenance, repair, lifecycle support, controls, and building efficiency work.</li><li style="margin:5px 0;"><strong>Strategic theme:</strong> sustainability, energy efficiency, electrification, and climate-focused infrastructure.</li></ul>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:32px;">Financial Statements Reviewed</h2>
+<p style="font-size:17px;line-height:1.65;margin:0 0 18px 0;">
+This section reviews Trane Technologies' three required financial statements: the Consolidated Statements of Earnings, Consolidated Balance Sheets, and Consolidated Statements of Cash Flows. These screenshots document the financial statements used for the analysis.
+</p>
+<h3 style="color:#CFB87C;font-size:24px;margin:18px 0 12px 0;">Consolidated Statements of Earnings</h3>
+<div style="background-color:#F8F8F8;padding:12px;border-radius:8px;text-align:center;width:100%;max-width:100%;box-sizing:border-box;">
+<img alt="Trane Technologies Consolidated Statements of Earnings" src="images/income_statement.png" style="width:100%;max-width:1100px;height:auto;border-radius:4px;"/>
+</div>
+<p style="font-size:15px;color:#A2A4A3;line-height:1.5;margin:12px 0 22px 0;">
+Source: Trane Technologies 2025 Annual Report, Consolidated Statements of Earnings, page 161/F-4.
+</p>
+<h3 style="color:#CFB87C;font-size:24px;margin:18px 0 12px 0;">Consolidated Balance Sheets</h3>
+<div style="background-color:#F8F8F8;padding:12px;border-radius:8px;text-align:center;width:100%;max-width:100%;box-sizing:border-box;">
+<img alt="Trane Technologies Consolidated Balance Sheets" src="images/balance_sheet.png" style="width:100%;max-width:1100px;height:auto;border-radius:4px;"/>
+</div>
+<p style="font-size:15px;color:#A2A4A3;line-height:1.5;margin:12px 0 22px 0;">
+Source: Trane Technologies 2025 Annual Report, Consolidated Balance Sheets, page 163/F-6.
+</p>
+<h3 style="color:#CFB87C;font-size:24px;margin:18px 0 12px 0;">Consolidated Statements of Cash Flows</h3>
+<div style="background-color:#F8F8F8;padding:12px;border-radius:8px;text-align:center;width:100%;max-width:100%;box-sizing:border-box;">
+<img alt="Trane Technologies Consolidated Statements of Cash Flows" src="images/cash_flow_statement.png" style="width:100%;max-width:1100px;height:auto;border-radius:4px;"/>
+</div>
+<p style="font-size:15px;color:#A2A4A3;line-height:1.5;margin:12px 0 0 0;">
+Source: Trane Technologies 2025 Annual Report, Consolidated Statements of Cash Flows, page 165/F-8.
+</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2eaea4b2">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b6f1738b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #A2A4A3;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Company-provided performance snapshot</h2>
-<div style="background-color:#F8F8F8;padding:10px;border-radius:8px;text-align:center;"><img alt="Company-provided performance snapshot" src="images/q4_2025_slide_05.png" style="width:100%;max-width:850px;height:auto;"/></div><p style="font-size:14px;color:#A2A4A3;line-height:1.5;margin:12px 0 0 0;">Source: Trane Technologies Q4 2025 Earnings Presentation, slide 5. This is company-provided presentation material and includes non-GAAP measures noted on the slide.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:34px;">Financial Statement Review</h2>
+<p style="font-size:17px;line-height:1.7;margin:0 0 24px 0;max-width:1450px;">
+Trane Technologies' 2025 financial statements show a profitable company with strong operating cash flow, adequate short-term liquidity, and meaningful but manageable leverage. The income statement shows earning power, the balance sheet shows financial position, and the cash flow statement confirms that earnings were supported by cash generation.
+</p>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:360px;background-color:#111111;color:#F8F8F8;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:20px;margin:8px;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:26px;margin:0 0 18px 0;">Income Statement</h3>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px 14px;margin:0 0 10px 0;box-sizing:border-box;">
+<div style="color:#565A5C;font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:bold;margin-bottom:4px;">Net Revenues</div>
+<div style="color:#000000;font-size:28px;font-weight:bold;">$21,321.9M</div>
+</div>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px 14px;margin:0 0 10px 0;box-sizing:border-box;">
+<div style="color:#565A5C;font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:bold;margin-bottom:4px;">Operating Income</div>
+<div style="color:#000000;font-size:28px;font-weight:bold;">$3,967.4M</div>
+</div>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px 14px;margin:0 0 16px 0;box-sizing:border-box;">
+<div style="color:#565A5C;font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:bold;margin-bottom:4px;">Net Earnings Attributable to Trane</div>
+<div style="color:#000000;font-size:28px;font-weight:bold;">$2,918.6M</div>
+</div>
+<div style="background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:14px;box-sizing:border-box;">
+<p style="font-size:16px;line-height:1.55;margin:0;color:#F8F8F8;">
+    Operating income was 18.6% of revenue, and net earnings attributable to Trane were 13.7% of revenue.
+    </p>
+</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:360px;background-color:#111111;color:#F8F8F8;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:20px;margin:8px;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:26px;margin:0 0 18px 0;">Balance Sheet</h3>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px 14px;margin:0 0 10px 0;box-sizing:border-box;">
+<div style="color:#565A5C;font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:bold;margin-bottom:4px;">Total Assets</div>
+<div style="color:#000000;font-size:28px;font-weight:bold;">$21,420.7M</div>
+</div>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px 14px;margin:0 0 10px 0;box-sizing:border-box;">
+<div style="color:#565A5C;font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:bold;margin-bottom:4px;">Total Liabilities</div>
+<div style="color:#000000;font-size:28px;font-weight:bold;">$12,819.8M</div>
+</div>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px 14px;margin:0 0 16px 0;box-sizing:border-box;">
+<div style="color:#565A5C;font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:bold;margin-bottom:4px;">Shareholders' Equity</div>
+<div style="color:#000000;font-size:28px;font-weight:bold;">$8,579.2M</div>
+</div>
+<div style="background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:14px;box-sizing:border-box;">
+<p style="font-size:16px;line-height:1.55;margin:0;color:#F8F8F8;">
+    The balance sheet shows acceptable liquidity with a current ratio of 1.25. Liabilities equal 59.8% of total assets.
+    </p>
+</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:360px;background-color:#111111;color:#F8F8F8;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:20px;margin:8px;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:26px;margin:0 0 18px 0;">Cash Flow Statement</h3>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px 14px;margin:0 0 10px 0;box-sizing:border-box;">
+<div style="color:#565A5C;font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:bold;margin-bottom:4px;">Operating Cash Flow</div>
+<div style="color:#000000;font-size:28px;font-weight:bold;">$3,194.5M</div>
+</div>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px 14px;margin:0 0 10px 0;box-sizing:border-box;">
+<div style="color:#565A5C;font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:bold;margin-bottom:4px;">Continuing Operating Cash Flow</div>
+<div style="color:#000000;font-size:28px;font-weight:bold;">$3,220.4M</div>
+</div>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px 14px;margin:0 0 16px 0;box-sizing:border-box;">
+<div style="color:#565A5C;font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:bold;margin-bottom:4px;">Free Cash Flow</div>
+<div style="color:#000000;font-size:28px;font-weight:bold;">$2,887.3M</div>
+</div>
+<div style="background-color:#1A1A1A;border:1px solid #565A5C;border-radius:8px;padding:14px;box-sizing:border-box;">
+<p style="font-size:16px;line-height:1.55;margin:0;color:#F8F8F8;">
+    Operating cash flow exceeded net earnings, which means reported profit was backed by cash generation.
+    </p>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;color:#F8F8F8;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:20px;margin:22px 8px 0 8px;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:26px;margin:0 0 12px 0;">Overall Assessment</h3>
+<p style="font-size:17px;line-height:1.65;margin:0;color:#F8F8F8;">
+    Overall, Trane Technologies appears financially healthy in 2025. The company generated strong revenue, produced solid operating and net earnings, maintained enough current assets to cover current liabilities, and generated substantial cash flow. The main item to monitor is leverage, but the interest coverage and times-interest-earned ratios show that earnings are well above interest expense.
+    </p>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=624b4d78">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=17fb1811">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#A2A4A3;margin:0 0 12px 0;">Part 3: Financial Analysis</h2>
-<p style="font-size:16px;line-height:1.6;margin:0;">This section ties the three financial statements to the ratios from Module 2.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:32px;">Ratio Analysis</h2>
+<p style="font-size:17px;line-height:1.65;margin:0 0 20px 0;">
+The ratios below use 2025 values from Trane Technologies' annual financial statements. Dollar amounts are in millions except per-share data. Each calculation shows the formula, the actual numbers used, and the final result.
+</p>
+<h3 style="color:#A2A4A3;font-size:25px;margin:18px 0 14px 0;">Liquidity Ratios</h3>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Current Ratio</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">1.25</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Formula and Calculation</div>
+<div style="font-size:19px;line-height:1.5;">
+        Current Ratio =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">Current Assets</span>
+<span style="display:block;padding:3px 14px 0 14px;">Current Liabilities</span>
+</span>
+        =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">7,863.0</span>
+<span style="display:block;padding:3px 14px 0 14px;">6,286.7</span>
+</span>
+        = <strong>1.25</strong>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Quick Ratio</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">0.92</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Formula and Calculation</div>
+<div style="font-size:19px;line-height:1.5;">
+        Quick Ratio =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">Current Assets - Inventory</span>
+<span style="display:block;padding:3px 14px 0 14px;">Current Liabilities</span>
+</span>
+        =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">7,863.0 - 2,103.6</span>
+<span style="display:block;padding:3px 14px 0 14px;">6,286.7</span>
+</span>
+        = <strong>0.92</strong>
+</div>
+</div>
+</div>
+<h3 style="color:#A2A4A3;font-size:25px;margin:28px 0 14px 0;">Asset Management Ratios</h3>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Inventory Turnover Ratio</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">6.47</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Formula and Calculation</div>
+<div style="font-size:19px;line-height:1.5;">
+        Inventory Turnover =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">Cost of Goods Sold</span>
+<span style="display:block;padding:3px 14px 0 14px;">Inventory</span>
+</span>
+        =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">13,611.7</span>
+<span style="display:block;padding:3px 14px 0 14px;">2,103.6</span>
+</span>
+        = <strong>6.47</strong>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0 0 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Days Sales Outstanding</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">55.4 days</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Formula and Calculation</div>
+<div style="font-size:19px;line-height:1.5;">
+        DSO =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">Accounts Receivable</span>
+<span style="display:block;padding:3px 14px 0 14px;">Net Revenues / 365</span>
+</span>
+        =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">3,235.3</span>
+<span style="display:block;padding:3px 14px 0 14px;">21,321.9 / 365</span>
+</span>
+        = <strong>55.4 days</strong>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8c7b5157">
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ff10e0b8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Income statement readout</h2>
-<p style="font-size:16px;line-height:1.6;margin:0 0 12px 0;">Revenue grew to $21,321.9 million in 2025. Operating income was $3,967.4 million, and net earnings attributable to Trane Technologies were $2,918.6 million.</p><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Gross Margin</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">36.2%</div></div><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Operating Margin</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">18.6%</div></div><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Net Margin</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">13.7%</div></div><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Diluted EPS</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$12.98</div></div><p style="font-size:16px;line-height:1.6;margin:0 0 12px 0;">The useful point is that 2025 was not only larger than prior years. The margin profile was stronger too.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:32px;">Profitability and Debt Management Ratios</h2>
+<h3 style="color:#A2A4A3;font-size:25px;margin:18px 0 14px 0;">Profitability Ratios</h3>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Gross Margin</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">36.2%</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Formula and Calculation</div>
+<div style="font-size:19px;line-height:1.5;">
+        Gross Margin =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">Gross Profit</span>
+<span style="display:block;padding:3px 14px 0 14px;">Net Revenues</span>
+</span>
+        =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">7,710.2</span>
+<span style="display:block;padding:3px 14px 0 14px;">21,321.9</span>
+</span>
+        = <strong>36.2%</strong>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Operating Margin</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">18.6%</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Formula and Calculation</div>
+<div style="font-size:19px;line-height:1.5;">
+        Operating Margin =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">Operating Income</span>
+<span style="display:block;padding:3px 14px 0 14px;">Net Revenues</span>
+</span>
+        =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">3,967.4</span>
+<span style="display:block;padding:3px 14px 0 14px;">21,321.9</span>
+</span>
+        = <strong>18.6%</strong>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Net Margin</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">13.7%</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Formula and Calculation</div>
+<div style="font-size:19px;line-height:1.5;">
+        Net Margin =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">Net Earnings Attributable to Trane</span>
+<span style="display:block;padding:3px 14px 0 14px;">Net Revenues</span>
+</span>
+        =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">2,918.6</span>
+<span style="display:block;padding:3px 14px 0 14px;">21,321.9</span>
+</span>
+        = <strong>13.7%</strong>
+</div>
+</div>
+</div>
+<h3 style="color:#A2A4A3;font-size:25px;margin:28px 0 14px 0;">Debt Management Ratios</h3>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Debt Ratio</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">59.8%</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Formula and Calculation</div>
+<div style="font-size:19px;line-height:1.5;">
+        Debt Ratio =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">Total Liabilities</span>
+<span style="display:block;padding:3px 14px 0 14px;">Total Assets</span>
+</span>
+        =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">12,819.8</span>
+<span style="display:block;padding:3px 14px 0 14px;">21,420.7</span>
+</span>
+        = <strong>59.8%</strong>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Debt-to-Equity Ratio</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">1.49</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Formula and Calculation</div>
+<div style="font-size:19px;line-height:1.5;">
+        Debt-to-Equity =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">Total Liabilities</span>
+<span style="display:block;padding:3px 14px 0 14px;">Shareholders' Equity</span>
+</span>
+        =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">12,819.8</span>
+<span style="display:block;padding:3px 14px 0 14px;">8,579.2</span>
+</span>
+        = <strong>1.49</strong>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Interest Coverage Ratio</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">19.16</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Formula and Calculation</div>
+<div style="font-size:19px;line-height:1.5;">
+        Interest Coverage =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">EBITDA Proxy</span>
+<span style="display:block;padding:3px 14px 0 14px;">Interest Expense</span>
+</span>
+        =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">3,967.4 + 376.3</span>
+<span style="display:block;padding:3px 14px 0 14px;">226.7</span>
+</span>
+        = <strong>19.16</strong>
+</div>
+<div style="font-size:14px;line-height:1.4;margin-top:10px;color:#565A5C;">EBITDA proxy equals operating income plus depreciation and amortization.</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0 0 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Times-Interest-Earned Ratio</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">17.50</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Formula and Calculation</div>
+<div style="font-size:19px;line-height:1.5;">
+        Times Interest Earned =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">Operating Income</span>
+<span style="display:block;padding:3px 14px 0 14px;">Interest Expense</span>
+</span>
+        =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">3,967.4</span>
+<span style="display:block;padding:3px 14px 0 14px;">226.7</span>
+</span>
+        = <strong>17.50</strong>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1c2d3c16">
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e4c1996c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Balance sheet readout</h2>
-<p style="font-size:16px;line-height:1.6;margin:0 0 12px 0;">Total assets were $21,420.7 million. Total liabilities were $12,819.8 million. Shareholders' equity was $8,579.2 million.</p><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Current Ratio</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">1.25</div></div><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Quick Ratio</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">0.92</div></div><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Debt Ratio</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">59.8%</div></div><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Debt-to-Equity</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">1.49</div></div><p style="font-size:16px;line-height:1.6;margin:0 0 12px 0;">The company uses leverage, but the liquidity and coverage ratios do not point to near-term stress.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:32px;">Investment Ratios</h2>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Return on Assets</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">13.6%</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Formula and Calculation</div>
+<div style="font-size:19px;line-height:1.5;">
+        Return on Assets =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">Net Earnings Attributable to Trane</span>
+<span style="display:block;padding:3px 14px 0 14px;">Total Assets</span>
+</span>
+        =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">2,918.6</span>
+<span style="display:block;padding:3px 14px 0 14px;">21,420.7</span>
+</span>
+        = <strong>13.6%</strong>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0 0 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Return on Equity</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">34.0%</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Formula and Calculation</div>
+<div style="font-size:19px;line-height:1.5;">
+        Return on Equity =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">Net Earnings Attributable to Trane</span>
+<span style="display:block;padding:3px 14px 0 14px;">Shareholders' Equity</span>
+</span>
+        =
+        <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 8px;">
+<span style="display:block;border-bottom:2px solid #000000;padding:0 14px;">2,918.6</span>
+<span style="display:block;padding:3px 14px 0 14px;">8,579.2</span>
+</span>
+        = <strong>34.0%</strong>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9bbc5fa6">
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e51f4c84">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Cash flow readout</h2>
-<p style="font-size:16px;line-height:1.6;margin:0 0 12px 0;">Operating cash flow was $3,194.5 million in 2025. Investing cash flow was negative, which is normal for a company investing in assets and growth. Financing cash flow was also negative, which usually reflects dividends, share repurchases, debt activity, or other capital returns.</p><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Operating Cash Flow</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$3,194.5M</div></div><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Investing Cash Flow</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">-$640.0M</div></div><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Financing Cash Flow</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">-$2,495.8M</div></div><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">CapEx</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">-$383.0M</div></div><p style="font-size:16px;line-height:1.6;margin:0 0 12px 0;">The cash flow statement supports the same story as the income statement: Trane is generating real cash, not just accounting earnings.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:32px;">Market Value Ratios</h2>
+<p style="font-size:17px;line-height:1.65;margin:0 0 18px 0;">
+The market value ratios below are disclosed directly in Trane Technologies' 2025 Consolidated Statements of Earnings. Unlike the other ratios, basic EPS and diluted EPS do not need to be recalculated from the balance sheet. They already reflect the company’s earnings and weighted average shares outstanding.
+</p>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Basic EPS</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">$13.09</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Disclosed Value</div>
+<div style="font-size:19px;line-height:1.5;">
+        Basic Earnings Per Share = <strong>$13.09</strong>
+</div>
+<p style="font-size:15px;line-height:1.45;margin:12px 0 0 0;color:#565A5C;">
+    Basic EPS uses the basic weighted average number of ordinary shares outstanding.
+    </p>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-radius:10px;padding:16px;margin:14px 0 0 0;width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:24%;min-width:230px;box-sizing:border-box;padding-right:14px;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin-bottom:6px;">Diluted EPS</div>
+<div style="color:#F8F8F8;font-size:42px;font-weight:bold;line-height:1;">$12.98</div>
+</div>
+<div style="display:inline-block;vertical-align:top;width:74%;min-width:520px;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;">
+<div style="font-size:20px;font-weight:bold;margin-bottom:10px;">Disclosed Value</div>
+<div style="font-size:19px;line-height:1.5;">
+        Diluted Earnings Per Share = <strong>$12.98</strong>
+</div>
+<p style="font-size:15px;line-height:1.45;margin:12px 0 0 0;color:#565A5C;">
+    Diluted EPS is the better investor-facing EPS measure because it includes potential share dilution.
+    </p>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a5c23cbf">
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=12d46edc">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#A2A4A3;margin:0 0 12px 0;">2025 Ratio Math</h2>
-<p style="font-size:16px;line-height:1.6;margin:0;">Each ratio below uses the 2025 annual report values. The equations are built as styled HTML so VS Code does not show raw LaTeX or raw tags.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:32px;">Year-over-Year Ratio Trend Review</h2>
+<p style="font-size:17px;line-height:1.7;margin:0 0 20px 0;">
+This section compares Trane Technologies’ key financial ratios across 2023, 2024, and 2025. The goal is to show the trend, not repeat the full ratio math. The same ratio basis is used from the earlier calculation section, including year-end balance sheet values for assets, equity, inventory, receivables, and liabilities.
+</p>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:23%;min-width:250px;background-color:#111111;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:16px;margin:6px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Profitability Trend</div>
+<div style="color:#F8F8F8;font-size:28px;font-weight:bold;margin:8px 0;">Margins Expanded</div>
+<p style="font-size:15px;line-height:1.5;margin:0;color:#DCDCDC;">
+    Gross margin, operating margin, and net margin all improved from 2023 to 2025.
+    </p>
+</div>
+<div style="display:inline-block;vertical-align:top;width:23%;min-width:250px;background-color:#111111;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:16px;margin:6px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Liquidity Trend</div>
+<div style="color:#F8F8F8;font-size:28px;font-weight:bold;margin:8px 0;">Improved</div>
+<p style="font-size:15px;line-height:1.5;margin:0;color:#DCDCDC;">
+    Current ratio and quick ratio both moved in the right direction each year.
+    </p>
+</div>
+<div style="display:inline-block;vertical-align:top;width:23%;min-width:250px;background-color:#111111;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:16px;margin:6px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Leverage Trend</div>
+<div style="color:#F8F8F8;font-size:28px;font-weight:bold;margin:8px 0;">Lower Risk</div>
+<p style="font-size:15px;line-height:1.5;margin:0;color:#DCDCDC;">
+    Debt ratio and debt-to-equity ratio declined from 2023 to 2025.
+    </p>
+</div>
+<div style="display:inline-block;vertical-align:top;width:23%;min-width:250px;background-color:#111111;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:16px;margin:6px;box-sizing:border-box;">
+<div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">Shareholder Metric</div>
+<div style="color:#F8F8F8;font-size:28px;font-weight:bold;margin:8px 0;">EPS Increased</div>
+<p style="font-size:15px;line-height:1.5;margin:0;color:#DCDCDC;">
+    Basic EPS and diluted EPS increased each year from 2023 through 2025.
+    </p>
+</div>
+</div>
+<p style="font-size:17px;line-height:1.7;margin:22px 0 0 0;">
+The overall pattern is favorable. Trane became more profitable, slightly less leveraged, and better covered its interest expense while continuing to grow earnings per share.
+</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5aab8c0e">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=13ee94d1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Current Ratio</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">1.25</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">Current Ratio = <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">Current Assets</span><span style="display:block;padding:2px 10px 0 10px;">Current Liabilities</span></span></div><div style="margin:7px 0;">= <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">7,863.0</span><span style="display:block;padding:2px 10px 0 10px;">6,286.7</span></span></div><div style="margin:7px 0;">= 1.25</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> Trane has 1.25 dollars of current assets for every 1.00 dollar of current liabilities.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
+<div style="background-color:#000000;color:#F8F8F8;width:100%;max-width:1600px;margin:0 auto;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;box-sizing:border-box;overflow-wrap:break-word;">
+<h2 style="color:#CFB87C;margin:0 0 14px 0;font-size:32px;">YoY Ratio Trend Review</h2>
+<p style="font-size:17px;line-height:1.7;margin:0 0 20px 0;">
+This section compares Trane Technologies’ key financial ratios across 2023, 2024, and 2025. The goal is to show direction and trend without repeating the full ratio formulas.
+</p>
+<div style="background-color:#111111;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:18px;margin:18px 0;width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 14px 0;">Liquidity Ratios</h3>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:48%;min-width:520px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Current Ratio</div>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2023</div><div style="font-size:24px;font-weight:bold;">1.13</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2024</div><div style="font-size:24px;font-weight:bold;">1.21</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2025</div><div style="font-size:24px;font-weight:bold;">1.25</div></div>
+</div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">Current asset coverage improved each year.</p>
+</div>
+<div style="display:inline-block;vertical-align:top;width:48%;min-width:520px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Quick Ratio</div>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2023</div><div style="font-size:24px;font-weight:bold;">0.78</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2024</div><div style="font-size:24px;font-weight:bold;">0.88</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2025</div><div style="font-size:24px;font-weight:bold;">0.92</div></div>
+</div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">Improved, but remained below 1.00 because inventory is a meaningful current asset.</p>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:18px;margin:18px 0;width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 14px 0;">Asset Management Ratios</h3>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:48%;min-width:520px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Inventory Turnover Ratio</div>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2023</div><div style="font-size:24px;font-weight:bold;">5.49</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2024</div><div style="font-size:24px;font-weight:bold;">6.47</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2025</div><div style="font-size:24px;font-weight:bold;">6.47</div></div>
+</div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">Improved in 2024 and held steady in 2025.</p>
+</div>
+<div style="display:inline-block;vertical-align:top;width:48%;min-width:520px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Days Sales Outstanding</div>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2023</div><div style="font-size:24px;font-weight:bold;">61.1</div><div style="font-size:12px;color:#565A5C;">days</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2024</div><div style="font-size:24px;font-weight:bold;">56.9</div><div style="font-size:12px;color:#565A5C;">days</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2025</div><div style="font-size:24px;font-weight:bold;">55.4</div><div style="font-size:12px;color:#565A5C;">days</div></div>
+</div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">Receivables represented fewer days of sales each year.</p>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:18px;margin:18px 0;width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 14px 0;">Profitability Ratios</h3>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:330px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Gross Margin</div>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;box-sizing:border-box;text-align:center;"><span style="font-size:15px;color:#565A5C;font-weight:bold;">2023</span><br/><span style="font-size:24px;font-weight:bold;">33.1%</span><hr style="border:none;border-top:1px solid #DCDCDC;margin:10px 0;"/><span style="font-size:15px;color:#565A5C;font-weight:bold;">2024</span><br/><span style="font-size:24px;font-weight:bold;">35.7%</span><hr style="border:none;border-top:1px solid #DCDCDC;margin:10px 0;"/><span style="font-size:15px;color:#565A5C;font-weight:bold;">2025</span><br/><span style="font-size:24px;font-weight:bold;">36.2%</span></div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">Expanded each year.</p>
+</div>
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:330px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Operating Margin</div>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;box-sizing:border-box;text-align:center;"><span style="font-size:15px;color:#565A5C;font-weight:bold;">2023</span><br/><span style="font-size:24px;font-weight:bold;">16.4%</span><hr style="border:none;border-top:1px solid #DCDCDC;margin:10px 0;"/><span style="font-size:15px;color:#565A5C;font-weight:bold;">2024</span><br/><span style="font-size:24px;font-weight:bold;">17.6%</span><hr style="border:none;border-top:1px solid #DCDCDC;margin:10px 0;"/><span style="font-size:15px;color:#565A5C;font-weight:bold;">2025</span><br/><span style="font-size:24px;font-weight:bold;">18.6%</span></div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">Best margin trend in the review.</p>
+</div>
+<div style="display:inline-block;vertical-align:top;width:31%;min-width:330px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Net Margin</div>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;box-sizing:border-box;text-align:center;"><span style="font-size:15px;color:#565A5C;font-weight:bold;">2023</span><br/><span style="font-size:24px;font-weight:bold;">11.4%</span><hr style="border:none;border-top:1px solid #DCDCDC;margin:10px 0;"/><span style="font-size:15px;color:#565A5C;font-weight:bold;">2024</span><br/><span style="font-size:24px;font-weight:bold;">12.9%</span><hr style="border:none;border-top:1px solid #DCDCDC;margin:10px 0;"/><span style="font-size:15px;color:#565A5C;font-weight:bold;">2025</span><br/><span style="font-size:24px;font-weight:bold;">13.7%</span></div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">Improved beyond operating income.</p>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:18px;margin:18px 0;width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 14px 0;">Debt Management Ratios</h3>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:48%;min-width:520px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Debt Ratio</div>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2023</div><div style="font-size:24px;font-weight:bold;">63.8%</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2024</div><div style="font-size:24px;font-weight:bold;">62.8%</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2025</div><div style="font-size:24px;font-weight:bold;">59.8%</div></div>
+</div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">Liabilities became a smaller share of total assets.</p>
+</div>
+<div style="display:inline-block;vertical-align:top;width:48%;min-width:520px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Debt-to-Equity Ratio</div>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2023</div><div style="font-size:24px;font-weight:bold;">1.77</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2024</div><div style="font-size:24px;font-weight:bold;">1.70</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2025</div><div style="font-size:24px;font-weight:bold;">1.49</div></div>
+</div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">Leverage moved down across the three-year period.</p>
+</div>
+<div style="display:inline-block;vertical-align:top;width:48%;min-width:520px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Interest Coverage Ratio</div>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2023</div><div style="font-size:24px;font-weight:bold;">13.83</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2024</div><div style="font-size:24px;font-weight:bold;">16.27</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2025</div><div style="font-size:24px;font-weight:bold;">19.16</div></div>
+</div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">EBITDA-based coverage increased each year.</p>
+</div>
+<div style="display:inline-block;vertical-align:top;width:48%;min-width:520px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Times-Interest-Earned Ratio</div>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2023</div><div style="font-size:24px;font-weight:bold;">12.34</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2024</div><div style="font-size:24px;font-weight:bold;">14.68</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2025</div><div style="font-size:24px;font-weight:bold;">17.50</div></div>
+</div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">Operating income covered interest by a wider margin.</p>
+</div>
+</div>
+</div>
+<div style="background-color:#111111;border:1px solid #565A5C;border-top:6px solid #CFB87C;border-radius:10px;padding:18px;margin:18px 0;width:100%;box-sizing:border-box;">
+<h3 style="color:#CFB87C;font-size:24px;margin:0 0 14px 0;">Investment and Market Value Ratios</h3>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;vertical-align:top;width:48%;min-width:520px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Return on Assets</div>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2023</div><div style="font-size:24px;font-weight:bold;">10.4%</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2024</div><div style="font-size:24px;font-weight:bold;">12.7%</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2025</div><div style="font-size:24px;font-weight:bold;">13.6%</div></div>
+</div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">More earnings per dollar of assets.</p>
+</div>
+<div style="display:inline-block;vertical-align:top;width:48%;min-width:520px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Return on Equity</div>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2023</div><div style="font-size:24px;font-weight:bold;">28.9%</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2024</div><div style="font-size:24px;font-weight:bold;">34.4%</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2025</div><div style="font-size:24px;font-weight:bold;">34.0%</div></div>
+</div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">Rose in 2024 and stayed near that level in 2025.</p>
+</div>
+<div style="display:inline-block;vertical-align:top;width:48%;min-width:520px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Basic EPS</div>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2023</div><div style="font-size:24px;font-weight:bold;">$8.85</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2024</div><div style="font-size:24px;font-weight:bold;">$11.35</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2025</div><div style="font-size:24px;font-weight:bold;">$13.09</div></div>
+</div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">Increased each year.</p>
+</div>
+<div style="display:inline-block;vertical-align:top;width:48%;min-width:520px;background-color:#1A1A1A;border:1px solid #565A5C;border-radius:10px;padding:14px;margin:7px;box-sizing:border-box;">
+<div style="color:#CFB87C;font-size:22px;font-weight:bold;margin:0 0 12px 0;">Diluted EPS</div>
+<div style="width:100%;box-sizing:border-box;">
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2023</div><div style="font-size:24px;font-weight:bold;">$8.77</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2024</div><div style="font-size:24px;font-weight:bold;">$11.24</div></div>
+<div style="display:inline-block;width:31%;background-color:#F8F8F8;color:#000000;border-radius:8px;padding:12px;margin:3px;box-sizing:border-box;text-align:center;"><div style="font-size:12px;color:#565A5C;font-weight:bold;">2025</div><div style="font-size:24px;font-weight:bold;">$12.98</div></div>
+</div>
+<p style="font-size:15px;line-height:1.5;margin:12px 0 0 0;color:#DCDCDC;">Increased each year after dilution.</p>
+</div>
+</div>
+</div>
+<div style="background-color:#F8F8F8;color:#000000;border-radius:10px;padding:20px;margin:20px 0 0 0;width:100%;box-sizing:border-box;border-top:6px solid #CFB87C;">
+<h3 style="color:#565A5C;font-size:24px;margin:0 0 10px 0;">YoY Takeaway</h3>
+<p style="font-size:17px;line-height:1.65;margin:0;color:#000000;">
+The three-year trend is favorable. Margins expanded, EPS increased, leverage declined, liquidity improved, and interest coverage increased. The main items to watch are the quick ratio remaining below 1.00, inventory turnover flattening in 2025, and return on equity easing slightly from 2024 to 2025.
+</p>
+</div>
+<p style="font-size:14px;color:#A2A4A3;line-height:1.5;margin:14px 0 0 0;">
+Source basis: Trane Technologies 2023, 2024, and 2025 Annual Reports / Form 10-K filings. Dollar amounts are in millions except EPS. Ratios use the same year-end calculation basis applied earlier in this notebook.
+</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fcd4c63b">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=813a5f04">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Quick Ratio</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">0.92</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">Quick Ratio = <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">Current Assets - Inventory</span><span style="display:block;padding:2px 10px 0 10px;">Current Liabilities</span></span></div><div style="margin:7px 0;">= <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">7,863.0 - 2,103.6</span><span style="display:block;padding:2px 10px 0 10px;">6,286.7</span></span></div><div style="margin:7px 0;">= 0.92</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> After removing inventory, Trane has 0.92 dollars of quick assets for every 1.00 dollar of current liabilities.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d922b73d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Inventory Turnover</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">6.47</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">Inventory Turnover = <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">Cost of Goods Sold</span><span style="display:block;padding:2px 10px 0 10px;">Inventory</span></span></div><div style="margin:7px 0;">= <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">13,611.7</span><span style="display:block;padding:2px 10px 0 10px;">2,103.6</span></span></div><div style="margin:7px 0;">= 6.47</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> Trane turns inventory into cost of sales about 6.47 times per year using this simple course formula.</p><p style="font-size:14px;color:#A2A4A3;line-height:1.5;margin:10px 0 0 0;"><strong style="color:#CFB87C;">Note:</strong> This uses ending inventory because that is the simple version used for the ratio walkthrough.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=58235dcd">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Days Sales Outstanding</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">55.4 days</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">DSO = <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">Accounts Receivable</span><span style="display:block;padding:2px 10px 0 10px;">Net Revenues / 365</span></span></div><div style="margin:7px 0;">= <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">3,235.3</span><span style="display:block;padding:2px 10px 0 10px;">21,321.9 / 365</span></span></div><div style="margin:7px 0;">= 55.4 days</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> Receivables represent about 55.4 days of sales.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6b0b44c5">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Gross Margin</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">36.2%</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">Gross Margin = <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">Gross Profit</span><span style="display:block;padding:2px 10px 0 10px;">Net Revenues</span></span></div><div style="margin:7px 0;">= <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">7,710.2</span><span style="display:block;padding:2px 10px 0 10px;">21,321.9</span></span></div><div style="margin:7px 0;">= 36.2%</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> Trane kept 36.2% of revenue after product and service costs.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=de75d24a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Operating Margin</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">18.6%</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">Operating Margin = <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">Operating Income</span><span style="display:block;padding:2px 10px 0 10px;">Net Revenues</span></span></div><div style="margin:7px 0;">= <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">3,967.4</span><span style="display:block;padding:2px 10px 0 10px;">21,321.9</span></span></div><div style="margin:7px 0;">= 18.6%</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> Trane converted 18.6% of revenue into operating income.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c5049678">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Net Margin</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">13.7%</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">Net Margin = <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">Net Earnings Attributable to Trane</span><span style="display:block;padding:2px 10px 0 10px;">Net Revenues</span></span></div><div style="margin:7px 0;">= <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">2,918.6</span><span style="display:block;padding:2px 10px 0 10px;">21,321.9</span></span></div><div style="margin:7px 0;">= 13.7%</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> Trane converted 13.7% of revenue into earnings attributable to shareholders.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cb093a1d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Debt Ratio</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">59.8%</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">Debt Ratio = <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">Total Liabilities</span><span style="display:block;padding:2px 10px 0 10px;">Total Assets</span></span></div><div style="margin:7px 0;">= <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">12,819.8</span><span style="display:block;padding:2px 10px 0 10px;">21,420.7</span></span></div><div style="margin:7px 0;">= 59.8%</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> About 59.8% of assets are financed by liabilities under this broad ratio.</p><p style="font-size:14px;color:#A2A4A3;line-height:1.5;margin:10px 0 0 0;"><strong style="color:#CFB87C;">Note:</strong> This uses total liabilities as the course-style debt proxy.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d86af2d0">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Debt-to-Equity Ratio</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">1.49</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">Debt-to-Equity = <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">Total Liabilities</span><span style="display:block;padding:2px 10px 0 10px;">Shareholders' Equity</span></span></div><div style="margin:7px 0;">= <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">12,819.8</span><span style="display:block;padding:2px 10px 0 10px;">8,579.2</span></span></div><div style="margin:7px 0;">= 1.49</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> Trane has 1.49 dollars of liabilities for each 1.00 dollar of shareholders' equity.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b5ffa160">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Interest Coverage</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">19.16</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">Interest Coverage = <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">EBITDA</span><span style="display:block;padding:2px 10px 0 10px;">Interest Expense</span></span></div><div style="margin:7px 0;">= <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">4,343.7</span><span style="display:block;padding:2px 10px 0 10px;">226.7</span></span></div><div style="margin:7px 0;">= 19.16</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> EBITDA covers interest expense about 19.16 times.</p><p style="font-size:14px;color:#A2A4A3;line-height:1.5;margin:10px 0 0 0;"><strong style="color:#CFB87C;">Note:</strong> EBITDA here equals operating income plus depreciation and amortization.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=56ed3d40">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Times Interest Earned</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">17.50</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">Times Interest Earned = <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">Operating Income</span><span style="display:block;padding:2px 10px 0 10px;">Interest Expense</span></span></div><div style="margin:7px 0;">= <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">3,967.4</span><span style="display:block;padding:2px 10px 0 10px;">226.7</span></span></div><div style="margin:7px 0;">= 17.50</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> Operating income covers interest expense about 17.50 times.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fe14a9e2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Return on Assets</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">13.6%</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">ROA = <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">Net Earnings Attributable to Trane</span><span style="display:block;padding:2px 10px 0 10px;">Total Assets</span></span></div><div style="margin:7px 0;">= <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">2,918.6</span><span style="display:block;padding:2px 10px 0 10px;">21,420.7</span></span></div><div style="margin:7px 0;">= 13.6%</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> Trane generated earnings equal to 13.6% of year-end assets.</p><p style="font-size:14px;color:#A2A4A3;line-height:1.5;margin:10px 0 0 0;"><strong style="color:#CFB87C;">Note:</strong> This uses year-end total assets to match the simple course formula.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b2aeadb5">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Return on Equity</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">34.0%</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">ROE = <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">Net Earnings Attributable to Trane</span><span style="display:block;padding:2px 10px 0 10px;">Shareholders' Equity</span></span></div><div style="margin:7px 0;">= <span style="display:inline-block;text-align:center;vertical-align:middle;line-height:1.15;margin:0 6px;"><span style="display:block;border-bottom:1px solid #F8F8F8;padding:0 10px;">2,918.6</span><span style="display:block;padding:2px 10px 0 10px;">8,579.2</span></span></div><div style="margin:7px 0;">= 34.0%</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> Trane generated earnings equal to 34.0% of year-end shareholders' equity.</p><p style="font-size:14px;color:#A2A4A3;line-height:1.5;margin:10px 0 0 0;"><strong style="color:#CFB87C;">Note:</strong> This uses year-end shareholders' equity to match the simple course formula.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b6619900">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Basic EPS</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">$13.09</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">Basic EPS = 13.09</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> Basic earnings per share were 13.09 dollars in 2025.</p><p style="font-size:14px;color:#A2A4A3;line-height:1.5;margin:10px 0 0 0;"><strong style="color:#CFB87C;">Note:</strong> EPS is disclosed directly in the income statement.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a566efc7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Diluted EPS</h2>
-<div style="font-size:34px;font-weight:bold;color:#F8F8F8;margin:0 0 16px 0;">$12.98</div><div style="background-color:#111111;color:#F8F8F8;padding:18px;border-radius:8px;border:1px solid #565A5C;text-align:center;font-size:19px;line-height:1.45;overflow-x:auto;"><div style="margin:7px 0;">Diluted EPS = 12.98</div></div><p style="font-size:16px;line-height:1.6;margin:14px 0 0 0;"><strong style="color:#CFB87C;">Readout:</strong> Diluted earnings per share were 12.98 dollars in 2025.</p><p style="font-size:14px;color:#A2A4A3;line-height:1.5;margin:10px 0 0 0;"><strong style="color:#CFB87C;">Note:</strong> EPS is disclosed directly in the income statement.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4643d158">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#A2A4A3;margin:0 0 12px 0;">Part 4: Required Financial Statement Screenshots</h2>
-<p style="font-size:16px;line-height:1.6;margin:0;">These are the required financial statement screenshots from the 2025 annual report.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8575c652">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #A2A4A3;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Consolidated Statements of Earnings</h2>
-<div style="background-color:#F8F8F8;padding:10px;border-radius:8px;text-align:center;"><img alt="Consolidated Statements of Earnings" src="images/income_statement.png" style="width:100%;max-width:850px;height:auto;"/></div><p style="font-size:14px;color:#A2A4A3;line-height:1.5;margin:12px 0 0 0;">Source: Trane Technologies 2025 Annual Report, page F-4, PDF page 161.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7cb3b65c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #A2A4A3;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Consolidated Balance Sheets</h2>
-<div style="background-color:#F8F8F8;padding:10px;border-radius:8px;text-align:center;"><img alt="Consolidated Balance Sheets" src="images/balance_sheet.png" style="width:100%;max-width:850px;height:auto;"/></div><p style="font-size:14px;color:#A2A4A3;line-height:1.5;margin:12px 0 0 0;">Source: Trane Technologies 2025 Annual Report, page F-6, PDF page 163.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=54816f6b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #A2A4A3;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Consolidated Statements of Cash Flows</h2>
-<div style="background-color:#F8F8F8;padding:10px;border-radius:8px;text-align:center;"><img alt="Consolidated Statements of Cash Flows" src="images/cash_flow_statement.png" style="width:100%;max-width:850px;height:auto;"/></div><p style="font-size:14px;color:#A2A4A3;line-height:1.5;margin:12px 0 0 0;">Source: Trane Technologies 2025 Annual Report, page F-8, PDF page 165.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=49428264">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#A2A4A3;margin:0 0 12px 0;">Beyond the Assignment: Annual Trend Review</h2>
-<p style="font-size:16px;line-height:1.6;margin:0;">After the required assignment work, I added a short annual trend check using 2023, 2024, and 2025. I am not mixing Q1 2026 into the annual comparison.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0b5e6bdd">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Net Revenues</h2>
-<div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2023</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$17,677.6M</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2024</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$19,838.2M</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2025</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$21,321.9M</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2025 YoY</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">7.5%</div></div></div>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2c33a2bb">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Operating Income</h2>
-<div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2023</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$2,894.0M</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2024</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$3,500.1M</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2025</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$3,967.4M</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2025 YoY</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">13.4%</div></div></div>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5ac4e6c4">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Net Earnings Attributable</h2>
-<div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2023</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$2,023.9M</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2024</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$2,567.9M</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2025</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$2,918.6M</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2025 YoY</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">13.7%</div></div></div>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=667b4897">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Operating Cash Flow</h2>
-<div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2023</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$2,389.6M</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2024</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$3,145.6M</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2025</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$3,194.5M</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2025 YoY</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">1.6%</div></div></div>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=48414722">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Diluted EPS</h2>
-<div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2023</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$8.8</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2024</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$11.2</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2025</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">$13.0</div></div></div><div style="display:inline-block;width:235px;margin:6px;"><div style="display:inline-block;vertical-align:top;width:205px;min-height:78px;background-color:#111111;border:1px solid #565A5C;border-left:6px solid #CFB87C;border-radius:8px;padding:12px;margin:6px;"><div style="color:#A2A4A3;font-size:12px;text-transform:uppercase;letter-spacing:.06em;">2025 YoY</div><div style="color:#F8F8F8;font-size:23px;font-weight:bold;margin-top:7px;">15.5%</div></div></div>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=15681322">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Final conclusion</h2>
-<p style="font-size:16px;line-height:1.6;margin:0 0 12px 0;">Trane Technologies looks financially stable and profitable based on the statements reviewed. I selected this company because Thermo King is part of Trane Technologies. Thermo King is my primary vendor, so we track Trane Technologies closely because the health of our primary vendor is important to my financial well being and employment.</p><p style="font-size:16px;line-height:1.6;margin:0 0 12px 0;">The main watch items are leverage, cash flow growth, and whether service revenue continues to expand. I do not see an obvious red flag in the 2025 statements reviewed for this assignment.</p>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=42439854">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="background-color:#000000;color:#F8F8F8;padding:25px;border-radius:10px;border-left:8px solid #CFB87C;border-right:8px solid #A2A4A3;font-family:Helvetica Neue,Arial,sans-serif;">
-<h2 style="color:#CFB87C;margin:0 0 14px 0;">Sources</h2>
-<ul style="font-size:16px;line-height:1.55;margin:0 0 8px 22px;padding:0;"><li style="margin:5px 0;">Trane Technologies 2025 Annual Report / Form 10-K, saved locally in the 2025 folder.</li><li style="margin:5px 0;">Trane Technologies Q4 2025 Earnings Presentation, slide 5.</li><li style="margin:5px 0;"><a href="https://investors.tranetechnologies.com/financial-information/financial-summary/default.aspx" style="color:#CFB87C;">Trane Technologies Investor Financial Summary</a></li><li style="margin:5px 0;">Extracted values and supporting files are saved in the local data and images folders for auditability.</li></ul>
-<hr style="border:none;border-top:8px solid #CFB87C;margin:18px 0 0 0;"/>
-</div>
 </div>
 </div>
 </div>
 </div>
 </main>
+<script>
+console.log(
+    "\n\n\n" +
+    "%c                TRAVIS IS #1\n" +
+    "%c              TRAVIS IS #1\n" +
+    "%c            TRAVIS IS #1\n" +
+    "%c                TRAVIS IS #1\n" +
+    "%c                TRAVIS IS #1\n" +
+    "%c                TRAVIS IS #1\n" +
+    "%c                TRAVIS IS #1\n" +
+    "%c                TRAVIS IS #1\n" +
+    "%c                TRAVIS IS #1\n" +
+    "%c                TRAVIS IS #1\n" +
+    "%c                TRAVIS IS #1\n" +
+    "%c                TRAVIS IS #1\n" +
+    "%c                TRAVIS IS #1\n" +
+    "%c   TRAVIS IS #1 TRAVIS IS #1 TRAVIS IS #1\n\n\n",
+    "color: green; font-weight: bold; font-size: 18px;",
+    "color: green; font-weight: bold; font-size: 18px;",
+    "color: green; font-weight: bold; font-size: 18px;",
+    "color: green; font-weight: bold; font-size: 18px;",
+    "color: green; font-weight: bold; font-size: 18px;",
+    "color: green; font-weight: bold; font-size: 18px;",
+    "color: green; font-weight: bold; font-size: 18px;",
+    "color: green; font-weight: bold; font-size: 18px;",
+    "color: green; font-weight: bold; font-size: 18px;",
+    "color: green; font-weight: bold; font-size: 18px;",
+    "color: green; font-weight: bold; font-size: 18px;",
+    "color: green; font-weight: bold; font-size: 18px;",
+    "color: green; font-weight: bold; font-size: 18px;",
+    "color: green; font-weight: bold; font-size: 18px;"
+);
+
+const year = new Date().getFullYear();
+console.log(
+    `%c© ${year} Travis Reinart - Trane Technologies - Understanding Financial Statements`,
+    "color: gold; font-size: 16px; font-weight: bold;"
+);
+console.log(
+    "%cLicensed under the MIT License",
+    "color: gold; font-size: 13px; font-weight: normal;"
+);
+console.log(
+    "%chttps://opensource.org/licenses/MIT",
+    "color: gold; font-size: 13px; font-weight: normal; text-decoration: underline;"
+);
+console.log(
+    "\n%c📂 GitHub Profile: %chttps://github.com/treinart\n",
+    "color: navy; font-size: 15px; font-weight: bold;",
+    "color: black; font-size: 15px; text-decoration: underline;"
+);
+console.log(
+    "\n%c🔗🟦 Connect on LinkedIn: %chttps://www.linkedin.com/in/travis-reinart/\n",
+    "color: crimson; font-size: 15px; font-weight: bold;",
+    "color: black; font-size: 15px; text-decoration: underline;"
+);
+</script>
 </body>
 </html>
